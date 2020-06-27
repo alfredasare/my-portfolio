@@ -1,0 +1,1 @@
+export const bitterSweet = '#FF6553';

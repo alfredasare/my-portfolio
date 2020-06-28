@@ -29,7 +29,6 @@ export const NavBarBrand = styled.div`
   width: 30%;
   z-index: 10;
   svg {
-    font-family: "Bauhaus 93",sans-serif;
     height: 100px;
     width: 100px;
     fill: ${bitterSweet};

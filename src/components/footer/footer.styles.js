@@ -173,7 +173,6 @@ export const FooterLogoContainer = styled.div``;
 
 export const FooterLogo = styled(Link)`
   svg {
-    font-family: "Bauhaus 93", sans-serif;
     height: 100px;
     width: 100px;
     fill: ${bitterSweet};

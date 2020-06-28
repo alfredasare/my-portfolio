@@ -13,6 +13,18 @@ export const GlobalStyle = createGlobalStyle`
       src: url("../assets/fonts/BAUHS93.TTF");
     }
     
+    .cls-1 {
+        font-size: 607px;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: Bauhaus93, 'Bauhaus 93',sans-serif;
+      }
+
+      .cls-2 {
+        font-size: 603px;
+      }
+    
     *, *:before, *:after {
         box-sizing: inherit;
     }

@@ -8,6 +8,11 @@ export const GlobalStyle = createGlobalStyle`
         scroll-behavior: smooth;
     }
     
+    @font-face {
+      font-family: "Bauhaus 93";
+      src: url("../assets/fonts/BAUHS93.TTF");
+    }
+    
     *, *:before, *:after {
         box-sizing: inherit;
     }

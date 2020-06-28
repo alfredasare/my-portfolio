@@ -18,7 +18,7 @@ export const NavBarContainer = styled.nav`
 export const NavBarRow = styled.div`
   width: 90%;
   margin: 0 auto;
-  height: 32px;
+  height: 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

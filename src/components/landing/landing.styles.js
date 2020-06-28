@@ -8,7 +8,6 @@ export const LandingWrapper = styled.header`
   height: 100vh;
   color: black;
   background-color: white;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,9 +69,13 @@ export const LandingImgContainer = styled.div`
   width: 100%;
   border-radius: 10px;
   
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 320px) {
+    margin-top: 25em;
+  }
+  
+  @media screen and (min-width: 321px) and (max-width: 520px) {
     margin-bottom: 30px;
-    margin-top: 150px;
+    margin-top: 20em;
   }
 `;
 

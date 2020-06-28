@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import { bitterSweet } from "../../utils/colors"
+import Img from 'gatsby-image'
+import { Link } from "gatsby"
 
 export const NavBarContainer = styled.nav`
   width: 100%;
@@ -25,15 +26,15 @@ export const NavBarRow = styled.div`
   align-items: center;
 `;
 
-export const NavBarBrand = styled.div`
+export const NavBarBrand = styled(Link)`
   width: 30%;
   z-index: 10;
-  svg {
-    height: 100px;
-    width: 100px;
-    fill: ${bitterSweet};
-  }
+  
+`;
 
+export const BrandLogo = styled(Img)`
+  height: 80px;
+  width: 80px;
 `;
 
 export const NavMenuContainer = styled.div`

@@ -1,20 +1,40 @@
 import React, {useState} from "react";
-import { NavBarBrand, NavBarContainer, NavBarRow, NavMenuContainer, NavMenuIcon, NavMenuText } from "./navbar.styles"
-import { Logo } from "../icons/icons.component"
+import {
+  BrandLogo,
+  NavBarBrand,
+  NavBarContainer,
+  NavBarRow,
+  NavMenuContainer,
+  NavMenuIcon,
+  NavMenuText
+} from "./navbar.styles"
 import Burger from "../burger/burger.component"
 import OverlayMenu from "../overlay-menu/overlay-menu.component"
+import { graphql, useStaticQuery } from "gatsby"
 
 
 const NavBar = () => {
 
   const [open, setOpen] = useState(false);
 
+  const data = useStaticQuery(graphql`
+      query {
+          logo: file(relativePath: { eq: "brand.png"}) {
+              childImageSharp {
+                  fluid(maxWidth: 600) {
+                      ...GatsbyImageSharpFluid
+                  }
+              }
+          }
+      }
+  `);
+
   return(
     <NavBarContainer>
       <OverlayMenu open={open} setOpen={setOpen}/>
       <NavBarRow>
-        <NavBarBrand>
-          <Logo />
+        <NavBarBrand to="/">
+          <BrandLogo fluid={data.logo.childImageSharp.fluid}/>
         </NavBarBrand>
         <NavMenuContainer>
           <NavMenuText onClick={() => setOpen(!open)}>

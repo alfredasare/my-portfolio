@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { bitterSweet, grey } from "../../utils/colors"
 import { Link } from "gatsby"
+import Img from 'gatsby-image'
 
 export const FooterContainer = styled.footer`
   height: 100%;
@@ -177,4 +178,9 @@ export const FooterLogo = styled(Link)`
     width: 100px;
     fill: ${bitterSweet};
   }
+`;
+
+export const FooterBrand = styled(Img)`
+  height: 80px;
+  width: 80px;
 `;

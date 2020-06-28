@@ -2,14 +2,26 @@ import React from "react";
 import {
   CopyRight,
   CopyRightRow,
-  CopyRightText, FirstAndSecondWrapper, FirstColumn, FirstColumnHead, FirstColumnText, FirstRow,
+  CopyRightText, FirstAndSecondWrapper, FirstColumn, FirstColumnHead, FirstColumnText, FirstRow, FooterBrand,
   FooterContainer, FooterIcon,
   FooterLogo,
   FooterLogoContainer, MailMe, MailMeHead, SecondColumn, SecondColumnListItem, SecondColumnUl, ThirdColumn
 } from "./footer.styles"
-import { Logo } from "../icons/icons.component"
+import { graphql, useStaticQuery } from "gatsby"
 
 const Footer = () => {
+
+  const data = useStaticQuery(graphql`
+      query {
+          footerLogo: file(relativePath: { eq: "brand.png"}) {
+              childImageSharp {
+                  fluid(maxWidth: 600) {
+                      ...GatsbyImageSharpFluid
+                  }
+              }
+          }
+      }
+  `);
 
   return (
     <FooterContainer>
@@ -57,7 +69,7 @@ const Footer = () => {
         </CopyRight>
         <FooterLogoContainer>
           <FooterLogo to="/">
-            <Logo />
+            <FooterBrand fluid={data.footerLogo.childImageSharp.fluid}/>
           </FooterLogo>
         </FooterLogoContainer>
       </CopyRightRow>

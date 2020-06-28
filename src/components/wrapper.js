@@ -1,5 +1,5 @@
 import React from "react"
-import { GlobalStyle } from "../page-styles/Global"
+import { GlobalStyle } from "../utils/Global"
 import { Helmet } from "react-helmet"
 
 const Wrapper = ({children}) => {

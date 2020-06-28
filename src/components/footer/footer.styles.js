@@ -1,20 +1,158 @@
 import styled from "styled-components";
-import { grey } from "../../utils/colors"
+import { bitterSweet, grey } from "../../utils/colors"
+import { Link } from "gatsby"
 
 export const FooterContainer = styled.footer`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: white;
   color: black;
-  margin-top: 50px;
+  margin-top: 30px;
+  padding: 100px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  
+  @media screen and (max-width: 600px) {
+    padding: 40px;
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    margin-top: 0;
+  }
 `;
 
-export const FirstRow = styled.div``;
+export const FirstRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+export const FirstAndSecondWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    width: 80%;
+  }
+`;
+
+export const FirstColumn = styled.div`
+  width: 40%;
+  
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+`;
+
+export const FirstColumnHead = styled.h2`
+  font-size: 4rem;
+  
+  @media screen and (max-width: 600px) {
+    font-size: 2rem;
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    font-size: 2rem;
+  }
+`;
+
+export const FirstColumnText = styled.p`
+  font-size: 1.7rem;
+  
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    font-size: 1.4rem;
+  }
+`;
+
+export const MailMeHead = styled.h4`
+  color: ${grey};
+  margin-bottom: 40px;
+`;
+
+export const MailMe = styled.a`
+  color: black;
+  padding: 20px 30px;
+  border: 3px solid black;
+`;
+
+export const SecondColumn = styled.div``;
+
+export const SecondColumnUl = styled.ul`
+  list-style-type: none;
+  font-size: 1.3rem;
+`;
+
+export const SecondColumnListItem = styled.li`
+  margin: 5px;
+  
+  a {
+    color: black;
+    transition: color 0.2s ease-in-out;
+    
+    &:hover {
+       color: ${bitterSweet};
+       border-bottom: 2px dotted ${bitterSweet};
+    }
+  }
+  
+  &:first-child {
+    margin-bottom: 20px;
+  }
+`;
+
+export const ThirdColumn = styled.div`
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+   @media screen and (max-width: 600px) {
+    flex-direction: row;
+    align-items: center;
+  }
+`;
+
+export const FooterIcon = styled.div`
+  padding: 30px 20px;
+
+  i {
+    font-size: 1.7rem;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+    
+    @media screen and (max-width: 600px) {
+      font-size: 2rem;
+    }
+    
+    &:hover {
+      color: ${bitterSweet};
+    }
+  }
+`;
 
 export const CopyRightRow = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 30px auto 0 auto;
 `;
 
 export const CopyRight = styled.div``;
@@ -23,10 +161,20 @@ export const CopyRightText = styled.p`
   margin-bottom: 0;
   padding-bottom: 0;
   color: ${grey};
+  font-weight: bold;
+  font-size: 1.2rem;
+  
+  @media screen and (max-width: 600px) {
+    margin-top: 0;
+  }
 `;
 
 export const FooterLogoContainer = styled.div``;
 
-export const FooterLogo = styled.a`
-  
+export const FooterLogo = styled(Link)`
+  svg {
+    height: 100px;
+    width: 100px;
+    fill: ${bitterSweet};
+  }
 `;

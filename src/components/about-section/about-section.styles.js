@@ -25,6 +25,10 @@ export const InnerBlurb = styled.div`
     align-items: center;
     width: 100%;
   }
+  
+  @media screen and (min-width: 610px) and (max-width: 1440px) {
+    width: 90%;
+  }
 `;
 
 export const Content = styled.div`
@@ -91,6 +95,8 @@ export const SideContent = styled.div`
   
   @media screen and (min-width: 768px) and  (max-width: 1024px) {
     padding: 20px;
+    width: 50%;
+    margin-left: 10%;
     justify-content: space-between;
   }
 `;

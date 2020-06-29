@@ -5,7 +5,7 @@ import ProjectItem from "../project-item/project-item.component"
 const ProjectList = ({projectData}) => {
 
   return (
-    <ProjectListContainer>
+    <ProjectListContainer id="projects">
       <SmallProjectListHead>
         Works
       </SmallProjectListHead>

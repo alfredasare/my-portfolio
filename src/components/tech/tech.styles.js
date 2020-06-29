@@ -1,5 +1,4 @@
-import styled from "styled-components"
-import { grey } from "../../utils/colors"
+import styled from "styled-components";
 
 export const TechContainer = styled.section`
   height: 100%;
@@ -36,7 +35,7 @@ export const TechParagraph = styled.h3`
 export const TechGrid = styled.div`
   margin-top: 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 60px;
   grid-row-gap: 40px;
   

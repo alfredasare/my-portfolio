@@ -20,17 +20,17 @@ const OverlayMenu = ({open, setOpen}) => {
           Home
         </MenuContent>
       </MenuLink>
-      <MenuLink to="/#">
+      <MenuLink to="/#projects">
         <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
           Projects
         </MenuContent>
       </MenuLink>
-      <MenuLink to="/#">
+      <MenuLink to="/#about">
         <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
           About us
         </MenuContent>
       </MenuLink>
-      <MenuLink to="/#">
+      <MenuLink to="/#contact">
         <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
           Contact
         </MenuContent>

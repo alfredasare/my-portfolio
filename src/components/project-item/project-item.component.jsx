@@ -8,7 +8,6 @@ import {
 } from "./project-item.styles"
 
 const ProjectItem = ({id, index, projectName, projectCategory, projectInfo, projectUrl, bgColor, fontColor, img, linkBg, linkColor}) => {
-  console.log(id);
   return (
     <ProjectItemContainer index={index}>
       <ProjectInfo bgColor={bgColor} fontColor={fontColor}>

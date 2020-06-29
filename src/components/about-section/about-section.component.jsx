@@ -12,7 +12,7 @@ import { PolyLine } from "../icons/icons.component"
 const AboutSection = () => {
 
   return (
-    <AboutSectionContainer>
+    <AboutSectionContainer id="about">
       <InnerBlurb>
         <Content>
           <ContentHead>A bit about me</ContentHead>
@@ -34,7 +34,7 @@ const AboutSection = () => {
             </p>
           </ContentParagraph>
           <ContentLinkRow>
-            <ContentLink to="/#">View Projects</ContentLink>
+            <ContentLink to="/#projects">View Projects</ContentLink>
           </ContentLinkRow>
         </Content>
         <SideContent>

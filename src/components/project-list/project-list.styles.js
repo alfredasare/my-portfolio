@@ -1,5 +1,4 @@
-import styled from "styled-components"
-import { bitterSweet } from "../../utils/colors"
+import styled from "styled-components";
 
 export const ProjectListContainer = styled.section`
   height: 100%;

@@ -29,7 +29,7 @@ const Landing = () => {
       <LandingGrid>
         <LandingIntro>
           <LandingIntroText>I'm <Name>Alfred Asare</Name>, a Freelance Web Developer. I enjoy creating clean and user-friendly web apps that give users delight and satisfaction.</LandingIntroText>
-          <CTA to="/#">View Projects</CTA>
+          <CTA to="/#projects">View Projects</CTA>
         </LandingIntro>
         <LandingImgContainer>
           <LandingImg fluid={data.alfred.childImageSharp.fluid}/>

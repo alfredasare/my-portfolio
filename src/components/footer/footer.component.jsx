@@ -24,7 +24,7 @@ const Footer = () => {
   `);
 
   return (
-    <FooterContainer>
+    <FooterContainer id="contact">
       <FirstRow>
         <FirstAndSecondWrapper>
           <FirstColumn>
@@ -38,11 +38,11 @@ const Footer = () => {
           <SecondColumn>
             <SecondColumnUl>
               <SecondColumnListItem><h4>Recent Projects</h4></SecondColumnListItem>
-              <SecondColumnListItem><a href="/#">Wevops</a></SecondColumnListItem>
-              <SecondColumnListItem><a href="/#">Edanra</a></SecondColumnListItem>
-              <SecondColumnListItem><a href="/#">Design Portfolio</a></SecondColumnListItem>
-              <SecondColumnListItem><a href="/#">ChopFlix</a></SecondColumnListItem>
-              <SecondColumnListItem><a href="/#">FR Logistics</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="https://wevops-portfolio.netlify.app/" target="_blank" rel="noreferrer">Wevops</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="https://www.edanra.com" target="_blank" rel="noreferrer">Edanra</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="https://drvmroll-design-portfolio.netlify.app/" target="_blank" rel="noreferrer">Design Portfolio</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="http://chop-flix.netlify.app/" target="_blank" rel="noreferrer">ChopFlix</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="https://www.frlogisticsltd.com" target="_blank" rel="noreferrer">FR Logistics</a></SecondColumnListItem>
             </SecondColumnUl>
           </SecondColumn>
         </FirstAndSecondWrapper>

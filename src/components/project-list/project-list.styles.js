@@ -15,11 +15,18 @@ export const ProjectListContainer = styled.section`
   }
 `;
 
-export const ProjectListHead = styled.h1`
+export const SmallProjectListHead = styled.h5`
+  color: #878a8f;
+  font-weight: lighter;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
   text-transform: uppercase;
-  color: ${bitterSweet};
+  text-align: center;
+`;
+
+export const ProjectListHead = styled.h1`
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 50px;
-  font-size: 3rem;
-  letter-spacing: 2px;
 `;

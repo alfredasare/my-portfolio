@@ -3,7 +3,6 @@ import Img from "gatsby-image";
 
 export const ProjectItemContainer = styled.div`
   height: 68vh;
-  //height: 100%;
   width: 100%;
   background-color: white;
   box-shadow: 0 18px 43px -20px rgba(0, 0, 0, 0.1);

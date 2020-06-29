@@ -8,6 +8,7 @@ import {NavBarScroll} from "../utils/navbar-scroll"
 import AboutSection from "../components/about-section/about-section.component"
 import Cursor from "../components/cursor/cursor.component"
 import ProjectListContainer from "../components/project-list/project-list.container"
+import Tech from "../components/tech/tech.component"
 
 
 export default () => {
@@ -23,6 +24,7 @@ export default () => {
       <NavBar />
       <Landing />
       <AboutSection />
+      <Tech />
       <ProjectListContainer />
       <Footer />
     </Wrapper>

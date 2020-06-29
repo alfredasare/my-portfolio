@@ -86,4 +86,12 @@ export const GlobalStyle = createGlobalStyle`
       300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
       150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
   }
+  
+  .st0{
+    fill: #2e001e
+  }
+  
+  .st1{
+    fill: #ff2bc2
+  }
 `

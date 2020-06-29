@@ -1,13 +1,16 @@
 import React from "react";
-import { ProjectListContainer, ProjectListHead } from "./project-list.styles"
+import { ProjectListContainer, ProjectListHead, SmallProjectListHead } from "./project-list.styles"
 import ProjectItem from "../project-item/project-item.component"
 
 const ProjectList = ({projectData}) => {
 
   return (
     <ProjectListContainer>
+      <SmallProjectListHead>
+        Works
+      </SmallProjectListHead>
       <ProjectListHead>
-        Projects
+        Projects I've worked on
       </ProjectListHead>
       {
         projectData.map((project, index) => {

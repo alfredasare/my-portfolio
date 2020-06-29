@@ -1,31 +1,37 @@
 import React from "react"
 import {
   ProjectCategory, ProjectCategoryWrapper,
-  ProjectHead,
+  ProjectHead, ProjectImage,
   ProjectImageContainer,
   ProjectInfo, ProjectInfoParagraph,
-  ProjectItemContainer
+  ProjectItemContainer, ViewSiteLink, ViewSiteLinkContainer
 } from "./project-item.styles"
 
-const ProjectItem = () => {
+const ProjectItem = ({id, index, projectName, projectCategory, projectInfo, projectUrl, bgColor, fontColor, img, linkBg, linkColor}) => {
+  console.log(id);
   return (
-    <ProjectItemContainer>
-      <ProjectInfo>
+    <ProjectItemContainer index={index}>
+      <ProjectInfo bgColor={bgColor} fontColor={fontColor}>
         <ProjectCategoryWrapper>
           <ProjectCategory>
-            E-housing
+            {projectCategory}
           </ProjectCategory>
         </ProjectCategoryWrapper>
         <ProjectHead>
-          Edanra
+          {projectName}
         </ProjectHead>
         <ProjectInfoParagraph>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eius fugit illum laboriosam magnam quae,
-          quis? Aliquid corporis cupiditate delectus itaque sapiente sint temporibus unde. Cum dolores esse sit
-          veritatis!
+          {projectInfo}
         </ProjectInfoParagraph>
+        <ViewSiteLinkContainer>
+          <ViewSiteLink href={projectUrl} target="_blank" linkBg={linkBg} linkColor={linkColor}>
+            Visit Website
+          </ViewSiteLink>
+        </ViewSiteLinkContainer>
       </ProjectInfo>
-      <ProjectImageContainer></ProjectImageContainer>
+      <ProjectImageContainer>
+        <ProjectImage fluid={img}/>
+      </ProjectImageContainer>
     </ProjectItemContainer>
   )
 }

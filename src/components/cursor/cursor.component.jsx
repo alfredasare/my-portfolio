@@ -5,7 +5,7 @@ const Cursor = () => {
 
   useEffect(() => {
     CursorScript();
-  });
+  }, []);
 
   return (
     <div className="cursor" />

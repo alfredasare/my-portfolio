@@ -1,5 +1,4 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import {
   AboutSectionContainer,
   Content,
@@ -11,26 +10,6 @@ import {
 import { PolyLine } from "../icons/icons.component"
 
 const AboutSection = () => {
-
-  const data = useStaticQuery(graphql`
-      query {
-          glasses: file(relativePath: { eq: "glasses.jpg"}) {
-              childImageSharp {
-                  fluid(maxWidth: 3000) {
-                      ...GatsbyImageSharpFluid
-                  }
-              }
-          }
-
-          keyboard: file(relativePath: { eq: "keyboard.jpg"}) {
-              childImageSharp {
-                  fluid(maxWidth: 3000) {
-                      ...GatsbyImageSharpFluid
-                  }
-              }
-          }
-      }
-  `)
 
   return (
     <AboutSectionContainer>

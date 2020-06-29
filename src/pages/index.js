@@ -6,6 +6,8 @@ import NavBar from "../components/navbar/navbar.component"
 import Footer from "../components/footer/footer.component"
 import {NavBarScroll} from "../utils/navbar-scroll"
 import AboutSection from "../components/about-section/about-section.component"
+import ProjectList from "../components/project-list/project-list.component"
+import Cursor from "../components/cursor/cursor.component"
 
 
 export default () => {
@@ -17,9 +19,11 @@ export default () => {
   return (
     <Wrapper>
       <SEO title="Alfred Asare"/>
+      <Cursor />
       <NavBar />
       <Landing />
       <AboutSection />
+      <ProjectList />
       <Footer />
     </Wrapper>
   );

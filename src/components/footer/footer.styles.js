@@ -108,7 +108,6 @@ export const SecondColumnListItem = styled.li`
     
     &:hover {
        color: ${bitterSweet};
-       border-bottom: 2px dotted ${bitterSweet};
     }
   }
   
@@ -129,8 +128,20 @@ export const ThirdColumn = styled.div`
   }
 `;
 
-export const FooterIcon = styled.div`
-  padding: 30px 20px;
+export const FooterIcon = styled.a`
+  //padding: 30px;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+  text-align: center;
+  vertical-align: middle;
+  
+  &:hover {
+    i {
+      color: ${bitterSweet};
+    }
+  }
 
   i {
     font-size: 1.7rem;
@@ -153,7 +164,7 @@ export const CopyRightRow = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 30px auto 0 auto;
+  margin: 80px auto 0 auto;
 `;
 
 export const CopyRight = styled.div``;
@@ -170,14 +181,8 @@ export const CopyRightText = styled.p`
   }
 `;
 
-export const FooterLogoContainer = styled.div``;
-
 export const FooterLogo = styled(Link)`
-  svg {
-    height: 100px;
-    width: 100px;
-    fill: ${bitterSweet};
-  }
+  
 `;
 
 export const FooterBrand = styled(Img)`

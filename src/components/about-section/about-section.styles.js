@@ -1,11 +1,16 @@
 import styled from "styled-components";
 import { Link } from "gatsby"
+import { bitterSweet, grey } from "../../utils/colors"
 
 export const AboutSectionContainer = styled.section`
-  height: 100vh;
+  height: 100%;
   width: 100%;
   padding: 48px 0;
   position: relative;
+  
+    @media screen and (max-width: 600px) {
+      margin-top: 60px;
+    }
 `;
 
 export const InnerBlurb = styled.div`
@@ -40,9 +45,10 @@ export const ContentHead = styled.h3`
   font-size: 1.8rem;
   letter-spacing: 1.5px;
   margin: 0;
+  color: ${bitterSweet};
 `;
 
-export const ContentParagraph = styled.p`
+export const ContentParagraph = styled.div`
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 400;
@@ -58,14 +64,54 @@ export const ContentLink = styled(Link)`
   text-transform: uppercase;
   text-decoration: none;
   color: black;
+  transition: color 0.2s ease-in-out;
+  
+  &:hover {
+    color: ${bitterSweet};
+  }
 `;
 
-export const BlurbImages = styled.div``;
+export const SideContent = styled.div`
+  width: 50%;
+  height: 320px;
+  padding: 50px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+  
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 100%;
+    margin-top: 35px;
+    flex-direction: column;
+  }
+  
+  @media screen and (min-width: 768px) and  (max-width: 1024px) {
+    padding: 20px;
+    justify-content: space-between;
+  }
+`;
 
-export const TopRight = styled.div``;
+export const SideContentHead = styled.h3`
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+`;
 
-export const BottomLeft = styled.div``;
+export const SideContentItem = styled.h4`
+  color: ${grey};
+  margin-bottom: 30px;
+  
+`;
 
-export const BlackBox = styled.div``;
+export const SideContentColumnOne = styled.div`
+  
+`;
 
-export const BlackBoxOverLay = styled.div``;
+export const SideContentColumnTwo = styled.div``;
+
+

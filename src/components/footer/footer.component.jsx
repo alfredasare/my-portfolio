@@ -5,7 +5,7 @@ import {
   CopyRightText, FirstAndSecondWrapper, FirstColumn, FirstColumnHead, FirstColumnText, FirstRow, FooterBrand,
   FooterContainer, FooterIcon,
   FooterLogo,
-  FooterLogoContainer, MailMe, MailMeHead, SecondColumn, SecondColumnListItem, SecondColumnUl, ThirdColumn
+  MailMe, MailMeHead, SecondColumn, SecondColumnListItem, SecondColumnUl, ThirdColumn
 } from "./footer.styles"
 import { graphql, useStaticQuery } from "gatsby"
 
@@ -67,11 +67,9 @@ const Footer = () => {
         <CopyRight>
           <CopyRightText>&copy; 2020 Alfred Asare </CopyRightText>
         </CopyRight>
-        <FooterLogoContainer>
           <FooterLogo to="/">
             <FooterBrand fluid={data.footerLogo.childImageSharp.fluid}/>
           </FooterLogo>
-        </FooterLogoContainer>
       </CopyRightRow>
     </FooterContainer>
   );

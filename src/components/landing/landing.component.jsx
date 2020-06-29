@@ -28,7 +28,7 @@ const Landing = () => {
     <LandingWrapper>
       <LandingGrid>
         <LandingIntro>
-          <LandingIntroText>I'm <Name>Alfred Asare</Name>, a Frontend Web Developer. I enjoy creating clean and user-friendly web apps that give users delight and satisfaction.</LandingIntroText>
+          <LandingIntroText>I'm <Name>Alfred Asare</Name>, a Freelance Web Developer. I enjoy creating clean and user-friendly web apps that give users delight and satisfaction.</LandingIntroText>
           <CTA to="/#">View Projects</CTA>
         </LandingIntro>
         <LandingImgContainer>

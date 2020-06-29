@@ -27,8 +27,9 @@ export const NavBarRow = styled.div`
 `;
 
 export const NavBarBrand = styled(Link)`
-  width: 30%;
+  width: auto;
   z-index: 10;
+ 
   
 `;
 
@@ -42,6 +43,9 @@ export const NavMenuContainer = styled.div`
   flex-direction: row;
   align-items: center;
   z-index: 10;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
 `;
 
 export const NavMenuText = styled.h5`
@@ -50,4 +54,6 @@ export const NavMenuText = styled.h5`
   cursor: pointer;
 `;
 
-export const NavMenuIcon = styled.div``;
+export const NavMenuIcon = styled.div`
+  
+`;

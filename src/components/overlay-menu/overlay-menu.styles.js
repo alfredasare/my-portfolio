@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "gatsby"
 
 export const StyledMenu = styled.div`
   display: flex;
@@ -32,10 +33,14 @@ export const StyledMenu = styled.div`
   }
 `;
 
+export const MenuLink = styled(Link)`
+  margin-bottom: 10vh;
+`;
+
 export const MenuContent = styled.h4`
   color: rgba(0,0,0,0.6);
   font-size: 2rem;
-  margin-bottom: 10vh;
+  //padding-bottom: 10vh;
   cursor: pointer;
   transition: color 0.2s ease-in;
   position: relative;

@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
-import {MenuContent, StyledMenu} from "./overlay-menu.styles"
-import {Link} from "gatsby";
+import { MenuContent, MenuLink, StyledMenu } from "./overlay-menu.styles"
 
 const OverlayMenu = ({open, setOpen}) => {
 
@@ -16,26 +15,26 @@ const OverlayMenu = ({open, setOpen}) => {
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden}>
-      <Link to="/#">
+      <MenuLink to="/#">
         <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
           Home
         </MenuContent>
-      </Link>
-      <Link to="/#">
+      </MenuLink>
+      <MenuLink to="/#">
         <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
           Projects
         </MenuContent>
-      </Link>
-      <Link to="/#">
+      </MenuLink>
+      <MenuLink to="/#">
         <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
           About us
         </MenuContent>
-      </Link>
-      <Link to="/#">
+      </MenuLink>
+      <MenuLink to="/#">
         <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
           Contact
         </MenuContent>
-      </Link>
+      </MenuLink>
     </StyledMenu>
   );
 };

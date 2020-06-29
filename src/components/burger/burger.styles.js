@@ -16,6 +16,8 @@ export const StyledBurger = styled.button`
   padding: 0;
   z-index: 10;
   outline: none;
+  border-radius: 50% !important;
+  
   span {
     width: 2rem;
     height: 0.25rem;
@@ -25,6 +27,7 @@ export const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
+    margin-left: ${({open}) => open ? '30%': 'unset'};
     :first-child {
       transform: ${({ open }) => open ? 'rotate(43deg)' : 'rotate(0)'};
     }

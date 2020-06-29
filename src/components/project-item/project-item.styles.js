@@ -2,8 +2,8 @@ import styled from "styled-components";
 import Img from "gatsby-image";
 
 export const ProjectItemContainer = styled.div`
-  //height: 70vh;
-  height: 100%;
+  height: 68vh;
+  //height: 100%;
   width: 100%;
   background-color: white;
   box-shadow: 0 18px 43px -20px rgba(0, 0, 0, 0.1);
@@ -15,6 +15,7 @@ export const ProjectItemContainer = styled.div`
   
   @media screen and (max-width: 600px) {
     flex-direction: column-reverse;
+    height: 100%;
   }
   
   @media screen and (min-width: 768px) and  (max-width: 1024px) {
@@ -108,6 +109,11 @@ export const ProjectImageContainer = styled.div`
   width: 50%;
   height: auto;
   background-color: gray;
+  
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 50vh;
+  }
 `;
 
 export const ProjectImage = styled(Img)`

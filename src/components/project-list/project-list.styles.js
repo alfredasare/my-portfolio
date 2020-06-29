@@ -3,8 +3,12 @@ import { bitterSweet } from "../../utils/colors"
 
 export const ProjectListContainer = styled.section`
   height: 100%;
-  width: 65%;
-  margin: 80px auto 30px auto;
+  width: 80%;
+  margin: 80px auto 80px auto;
+  
+  @media screen and (min-width: 768px) and  (max-width: 1024px) {
+    width: 90%;
+  }
 `;
 
 export const ProjectListHead = styled.h1`
@@ -12,4 +16,6 @@ export const ProjectListHead = styled.h1`
   color: ${bitterSweet};
   text-align: center;
   margin-bottom: 50px;
+  font-size: 3rem;
+  letter-spacing: 2px;
 `;

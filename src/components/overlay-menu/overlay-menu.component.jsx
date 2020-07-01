@@ -36,16 +36,16 @@ const OverlayMenu = ({open, setOpen}) => {
         </MenuContent>
       </MenuLink>
       <OverlayMenuSocial>
-        <OverlayMenuSocialLink>
+        <OverlayMenuSocialLink href="https://web.facebook.com/alfred.asareamoah" target="_blank" rel="noreferrer">
           <i className="fab fa-facebook-f" aria-hidden="true"/>
         </OverlayMenuSocialLink>
-        <OverlayMenuSocialLink>
+        <OverlayMenuSocialLink href="https://www.instagram.com/_alfredamoah_/" target="_blank" rel="noreferrer">
           <i className="fab fa-instagram" aria-hidden="true" />
         </OverlayMenuSocialLink>
-        <OverlayMenuSocialLink>
+        <OverlayMenuSocialLink href="https://www.linkedin.com/in/alfred-asare-amoah-2b31b5142/" target="_blank" rel="noreferrer">
           <i className="fab fa-linkedin" aria-hidden="true" />
         </OverlayMenuSocialLink>
-        <OverlayMenuSocialLink>
+        <OverlayMenuSocialLink href="https://github.com/alfredasare" target="_blank" rel="noreferrer">
           <i className="fab fa-github" aria-hidden="true" />
         </OverlayMenuSocialLink>
       </OverlayMenuSocial>

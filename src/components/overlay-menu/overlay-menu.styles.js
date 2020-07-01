@@ -102,6 +102,7 @@ export const OverlayMenuSocialLink = styled.a`
   width: 90px;
   line-height: 90px;
   text-align: center;
+  color: black;
   
   &:hover {
     i {

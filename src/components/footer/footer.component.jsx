@@ -45,7 +45,7 @@ const Footer = () => {
     });
 
     gsap.from(".footer-copyright-row", {
-      duration: 1.6,
+      duration: 1.5,
       opacity: 0,
       y: 50,
       scrollTrigger: {
@@ -93,16 +93,16 @@ const Footer = () => {
           </SecondColumn>
         </FirstAndSecondWrapper>
         <ThirdColumn className="footer-third-column">
-          <FooterIcon>
+          <FooterIcon href="https://web.facebook.com/alfred.asareamoah" target="_blank" rel="noreferrer">
             <i className="fab fa-facebook-f" aria-hidden="true"/>
           </FooterIcon>
-          <FooterIcon>
+          <FooterIcon href="https://www.instagram.com/_alfredamoah_/" target="_blank" rel="noreferrer">
             <i className="fab fa-instagram" aria-hidden="true" />
           </FooterIcon>
-          <FooterIcon>
+          <FooterIcon href="https://www.linkedin.com/in/alfred-asare-amoah-2b31b5142/" target="_blank" rel="noreferrer">
             <i className="fab fa-linkedin" aria-hidden="true" />
           </FooterIcon>
-          <FooterIcon>
+          <FooterIcon href="https://github.com/alfredasare" target="_blank" rel="noreferrer">
             <i className="fab fa-github" aria-hidden="true" />
           </FooterIcon>
 

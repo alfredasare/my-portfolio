@@ -1,12 +1,13 @@
 import React from "react"
 import SEO from "../components/seo"
+import NotFound from "../components/not-found/not-found.component"
+import WrapperComponent from "../components/wrapper/wrapper.component"
 
 const NotFoundPage = () => (
-  <>
+  <WrapperComponent>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </>
+    <NotFound />
+  </WrapperComponent>
 )
 
 export default NotFoundPage

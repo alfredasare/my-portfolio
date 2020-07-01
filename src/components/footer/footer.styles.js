@@ -129,13 +129,13 @@ export const ThirdColumn = styled.div`
 `;
 
 export const FooterIcon = styled.a`
-  //padding: 30px;
   border-radius: 50%;
   height: 90px;
   width: 90px;
   line-height: 90px;
   text-align: center;
   vertical-align: middle;
+  color: black;
   
   &:hover {
     i {

@@ -23,7 +23,7 @@ const ProjectListContainer = () => {
               }
           }
 
-          edanra: file(relativePath: { eq: "edanra2.png"}) {
+          edanra: file(relativePath: { eq: "edanra2.jpeg"}) {
               childImageSharp {
                   fluid(maxWidth: 2000) {
                       ...GatsbyImageSharpFluid

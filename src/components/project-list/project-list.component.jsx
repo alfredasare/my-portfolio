@@ -1,15 +1,40 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { gsap, Power4 } from "gsap"
 import { ProjectListContainer, ProjectListHead, SmallProjectListHead } from "./project-list.styles"
 import ProjectItem from "../project-item/project-item.component"
 
 const ProjectList = ({projectData}) => {
 
+
+  useEffect(() => {
+
+    gsap.from(".small-works-head", {
+      duration: 1,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".small-tech-head",
+        toggleActions: "restart none restart none"
+      },
+      ease: Power4.easeInOut
+    })
+
+    gsap.from(".project-list-head", {
+      duration: 1.2,
+      opacity: 0,
+      ease: Power4.easeInOut,
+      scrollTrigger: {
+        trigger: ".project-list-head",
+        toggleActions: "restart none restart none"
+      },
+    })
+  },[]);
+
   return (
     <ProjectListContainer id="projects">
-      <SmallProjectListHead>
+      <SmallProjectListHead className="small-works-head">
         Works
       </SmallProjectListHead>
-      <ProjectListHead>
+      <ProjectListHead className="project-list-head">
         Projects I've worked on
       </ProjectListHead>
       {

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "gatsby"
+import { bitterSweet } from "../../utils/colors"
 
 export const StyledMenu = styled.div`
   display: flex;
@@ -35,6 +36,7 @@ export const StyledMenu = styled.div`
 
 export const MenuLink = styled(Link)`
   margin-bottom: 10vh;
+  padding: 0;
 `;
 
 export const MenuContent = styled.h4`
@@ -54,7 +56,7 @@ export const MenuContent = styled.h4`
       position: absolute;
       height: 5px;
       width: 50px;
-      background-color: black;
+      background-color: ${bitterSweet};
       left: -70px;
       top: 50%;
       transform: translateY(-50%);
@@ -77,4 +79,47 @@ export const MenuContent = styled.h4`
   @media only screen and (max-width: 520px){
     font-size: 1.5em;
   }
+`;
+
+export const OverlayMenuSocial = styled.div`
+  height: 90px;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+  @media screen and  (max-width: 600px) {
+    width: 90%;
+  }
+`;
+
+export const OverlayMenuSocialLink = styled.a`
+  border-radius: 100%;
+  padding: 0;
+  margin: 0;
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+  text-align: center;
+  
+  &:hover {
+    i {
+      color: ${bitterSweet};
+    }
+  }
+
+  i {
+    font-size: 1.7rem;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+    vertical-align: middle;
+    
+    @media screen and (max-width: 600px) {
+      font-size: 2rem;
+    }
+    
+    &:hover {
+      color: ${bitterSweet};
+    }
 `;

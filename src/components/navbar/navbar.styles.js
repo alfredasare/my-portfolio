@@ -45,7 +45,6 @@ export const NavMenuContainer = styled.div`
   z-index: 10;
   border-radius: 50%;
   height: 80px;
-  width: 80px;
 `;
 
 export const NavMenuText = styled.h5`

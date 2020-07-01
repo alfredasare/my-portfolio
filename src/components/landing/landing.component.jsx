@@ -1,6 +1,7 @@
-import React, {useRef, useEffect} from "react"
-import {useStaticQuery, graphql} from "gatsby"
-import {gsap} from "gsap";
+import React, { useEffect } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { gsap, Power4 } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import {
   CTA,
   LandingGrid,
@@ -13,44 +14,56 @@ import {
 
 const Landing = () => {
 
-  let tl = gsap.timeline({delay: .8});
+  let tl = gsap.timeline({
+    delay: .8
+  })
 
   useEffect(() => {
 
-    tl.from(".imageContainer", {duration: 1.2, y: 1280, ease: "power4.out"}, 'Landing')
-      .from(".image", {duration: 2, scale: 1.2, ease: "power4.out"}, .2);
+    if (typeof window !== `undefined`) {
+      gsap.registerPlugin(ScrollTrigger)
+      gsap.core.globals("ScrollTrigger", ScrollTrigger)
+    }
+
+    tl.from(".imageContainer", {
+      duration: 1.2,
+      y: 1280,
+      ease: Power4.easeInOut
+    }, "Landing")
+      .from(".image", { duration: 2, scale: 1.2, ease: Power4.easeOut}, .2)
 
     tl.from(".intro-text", {
       opacity: 0,
       y: 60,
-      ease: "power4.out",
+      ease: Power4.easeInOut,
       duration: 1
-    }, 'Landing').from(".cta", {
+    }, "Landing").from(".cta", {
       opacity: 0,
       y: 60,
-      ease: "power4.out",
+      ease: Power4.easeInOut,
       duration: 1
-    }, .2);
-  }, [tl]);
+    }, .2)
+  }, [tl])
 
 
   const data = useStaticQuery(graphql`
-    query {
-        alfred: file(relativePath: { eq: "alfred.png"}) {
-            childImageSharp {
-                fluid(maxWidth: 600) {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-  `);
+      query {
+          alfred: file(relativePath: { eq: "alfred.png"}) {
+              childImageSharp {
+                  fluid(maxWidth: 600) {
+                      ...GatsbyImageSharpFluid
+                  }
+              }
+          }
+      }
+  `)
 
   return (
     <LandingWrapper className="land-wrapper">
       <LandingGrid>
         <LandingIntro className="fade">
-          <LandingIntroText className="intro-text">I'm <Name>Alfred Asare</Name>, a Freelance Web Developer. I enjoy creating clean and user-friendly web apps that give users delight and satisfaction.</LandingIntroText>
+          <LandingIntroText className="intro-text">I'm <Name>Alfred Asare</Name>, a Freelance Web Developer. I enjoy
+            creating clean and user-friendly web apps that give users delight and satisfaction.</LandingIntroText>
           <CTA to="/#projects" className="cta">View Projects</CTA>
         </LandingIntro>
         <LandingImgContainer className="imageContainer">
@@ -58,7 +71,7 @@ const Landing = () => {
         </LandingImgContainer>
       </LandingGrid>
     </LandingWrapper>
-  );
-};
+  )
+}
 
-export default Landing;
+export default Landing

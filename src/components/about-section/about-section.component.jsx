@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { gsap, Power4 } from "gsap";
 import {
   AboutSectionContainer,
   Content,
@@ -11,10 +12,38 @@ import { PolyLine } from "../icons/icons.component"
 
 const AboutSection = () => {
 
+  useEffect(() => {
+
+    gsap.from(".about-main", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".about-main",
+        toggleActions: "restart none restart none"
+      },
+      x: -30,
+      ease: Power4.easeInOut,
+      duration: 1,
+      // delay: 5.8
+    })
+
+    gsap.from(".about-side", {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".about-side",
+        toggleActions: "restart none restart none"
+      },
+      x: 30,
+      ease: Power4.easeInOut,
+      duration: 1,
+      // delay: 5.8
+    })
+
+  }, [])
+
   return (
-    <AboutSectionContainer id="about">
+    <AboutSectionContainer>
       <InnerBlurb>
-        <Content>
+        <Content className="about-main">
           <ContentHead>A bit about me</ContentHead>
           <ContentParagraph>
             <p>
@@ -37,7 +66,7 @@ const AboutSection = () => {
             <ContentLink to="/#projects">View Projects</ContentLink>
           </ContentLinkRow>
         </Content>
-        <SideContent>
+        <SideContent className="about-side">
           <SideContentColumnOne>
             <PolyLine/>
             <SideContentHead>Design</SideContentHead>
@@ -53,7 +82,6 @@ const AboutSection = () => {
           </SideContentColumnTwo>
         </SideContent>
       </InnerBlurb>
-      {/*    <Img fluid={data.keyboard.childImageSharp.fluid}/>*/}
     </AboutSectionContainer>
   )
 }

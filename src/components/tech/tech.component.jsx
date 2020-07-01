@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { gsap, Power4 } from "gsap"
 import {
   InnerTechContainer,
   SmallTechHead,
@@ -25,67 +26,112 @@ import {
 } from "../icons/icons.component"
 
 const Tech = () => {
+
+  useEffect(() => {
+
+    gsap.from(".small-tech-head", {
+      duration: 1,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".small-tech-head",
+        toggleActions: "restart none restart none"
+      },
+      ease: Power4.easeInOut
+    })
+
+    gsap.from(".tech-head", {
+      duration: 1.2,
+      opacity: 0,
+      ease: Power4.easeInOut,
+      scrollTrigger: {
+        trigger: ".tech-head",
+        toggleActions: "restart none restart none"
+      },
+    })
+
+    gsap.from(".tech-paragraph", {
+      duration: 1.3,
+      opacity: 0,
+      ease: Power4.easeInOut,
+      scrollTrigger: {
+        trigger: ".tech-paragraph",
+        toggleActions: "restart none restart none"
+      }
+    })
+
+    gsap.from(".tech-stack", {
+      duration: 1.4,
+      opacity: 0,
+      y: 40,
+      ease: Power4.easeOut,
+      scrollTrigger: {
+        trigger: ".tech-stack",
+        toggleActions: "restart none restart none"
+      }
+    });
+  }, [])
+
   return (
-    <TechContainer>
+    <TechContainer className="tech-container">
       <InnerTechContainer>
-        <SmallTechHead>Technologies</SmallTechHead>
-        <TechHead>Languages and tools I use</TechHead>
-        <TechParagraph>
+        <SmallTechHead className="small-tech-head">Technologies</SmallTechHead>
+        <TechHead className="tech-head">Languages and tools I use</TechHead>
+        <TechParagraph className="tech-paragraph">
           I have used a number of tools, frameworks and languages for a variety
           of projects in my years of experience but here is a selection of
           relevant technologies I have experience with:
         </TechParagraph>
-        <TechGrid>
+        <TechGrid className="tech-stack">
           <TechItem>
-            <Html />
+            <Html/>
             <TechItemText>HTML 5</TechItemText>
           </TechItem>
           <TechItem>
-            <Css />
+            <Css/>
             <TechItemText>CSS 3</TechItemText>
           </TechItem>
           <TechItem>
-            <Js />
+            <Js/>
             <TechItemText>JAVASCRIPT</TechItemText>
           </TechItem>
           <TechItem>
-            <ReactIcon />
+            <ReactIcon/>
             <TechItemText>REACT</TechItemText>
           </TechItem>
           <TechItem>
-            <Firebase />
+            <Firebase/>
             <TechItemText>FIREBASE</TechItemText>
           </TechItem>
           <TechItem>
-            <GraphQL />
+            <GraphQL/>
             <TechItemText>GRAPHQL</TechItemText>
           </TechItem>
           <TechItem>
-            <GatsbyJS />
+            <GatsbyJS/>
             <TechItemText>GATSBYJS</TechItemText>
           </TechItem>
           <TechItem>
-            <NodeJS />
+            <NodeJS/>
             <TechItemText>NODEJS</TechItemText>
           </TechItem>
           <TechItem>
-            <Redux />
+            <Redux/>
             <TechItemText>REDUX</TechItemText>
           </TechItem>
           <TechItem>
-            <Sagas />
+            <Sagas/>
             <TechItemText>REDUX SAGA</TechItemText>
           </TechItem>
           <TechItem>
-            <WS />
+            <WS/>
             <TechItemText>WEBSTORM</TechItemText>
           </TechItem>
           <TechItem>
-            <XD />
+            <XD/>
             <TechItemText>ADOBE XD</TechItemText>
           </TechItem>
           <TechItem>
-            <Sass />
+            <Sass/>
             <TechItemText>SASS</TechItemText>
           </TechItem>
         </TechGrid>

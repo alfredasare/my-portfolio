@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react"
 import {
   CopyRight,
   CopyRightRow,
@@ -8,8 +8,54 @@ import {
   MailMe, MailMeHead, SecondColumn, SecondColumnListItem, SecondColumnUl, ThirdColumn
 } from "./footer.styles"
 import { graphql, useStaticQuery } from "gatsby"
+import { gsap, Power4 } from "gsap"
 
 const Footer = () => {
+
+  useEffect(() => {
+
+    gsap.from(".footer-first-column", {
+      duration: 1,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".footer-first-column",
+        toggleActions: "restart none restart none"
+      },
+      ease: Power4.easeInOut
+    });
+
+    gsap.from(".footer-second-column", {
+      duration: 1.2,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".footer-second-column",
+        toggleActions: "restart none restart none"
+      },
+      ease: Power4.easeInOut
+    });
+
+    gsap.from(".footer-third-column", {
+      duration: 1.4,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: ".footer-third-column",
+        toggleActions: "restart none restart none"
+      },
+      ease: Power4.easeInOut
+    });
+
+    gsap.from(".footer-copyright-row", {
+      duration: 1.6,
+      opacity: 0,
+      y: 50,
+      scrollTrigger: {
+        trigger: ".footer-copyright-row",
+        toggleActions: "restart none restart none"
+      },
+    });
+
+
+  }, []);
 
   const data = useStaticQuery(graphql`
       query {
@@ -27,7 +73,7 @@ const Footer = () => {
     <FooterContainer id="contact">
       <FirstRow>
         <FirstAndSecondWrapper>
-          <FirstColumn>
+          <FirstColumn className="footer-first-column">
             <FirstColumnHead>Let's Talk</FirstColumnHead>
             <FirstColumnText>
               Feel free to reach out to me at any time. You can reach me through email, on Twitter or Instagram or through Whatsapp.
@@ -35,7 +81,7 @@ const Footer = () => {
             <div><MailMeHead>MAIL ME</MailMeHead></div>
             <MailMe href="mailto:alfredasare101@gmail.com?subject=Let%20us%20collaborate%20to%20build%20a%20website" target="_blank">alfredasare101@gmail.com</MailMe>
           </FirstColumn>
-          <SecondColumn>
+          <SecondColumn className="footer-second-column">
             <SecondColumnUl>
               <SecondColumnListItem><h4>Recent Projects</h4></SecondColumnListItem>
               <SecondColumnListItem><a href="https://wevops-portfolio.netlify.app/" target="_blank" rel="noreferrer">Wevops</a></SecondColumnListItem>
@@ -46,7 +92,7 @@ const Footer = () => {
             </SecondColumnUl>
           </SecondColumn>
         </FirstAndSecondWrapper>
-        <ThirdColumn>
+        <ThirdColumn className="footer-third-column">
           <FooterIcon>
             <i className="fab fa-facebook-f" aria-hidden="true"/>
           </FooterIcon>
@@ -63,7 +109,7 @@ const Footer = () => {
         </ThirdColumn>
       </FirstRow>
 
-      <CopyRightRow>
+      <CopyRightRow className="footer-copyright-row">
         <CopyRight>
           <CopyRightText>&copy; 2020 Alfred Asare </CopyRightText>
         </CopyRight>

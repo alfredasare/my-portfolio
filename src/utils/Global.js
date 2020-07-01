@@ -94,4 +94,11 @@ export const GlobalStyle = createGlobalStyle`
   .st1{
     fill: #ff2bc2
   }
+  
+  .viewport {
+  margin: 0 0 0 0;
+  width: 100vw;
+  overflow-x: hidden;
+  position: fixed;
+}
 `

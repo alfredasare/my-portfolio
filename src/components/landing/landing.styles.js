@@ -11,13 +11,16 @@ export const LandingWrapper = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
   
   @media screen and (max-width: 320px) {
     height: 100%;
+    padding-bottom: 20px;
   }
   
   @media screen and (min-width: 321px) and (max-width: 600px) {
     height: 100%;
+    padding-bottom: 20px;
   }
   
   @media screen and (min-width: 601px) and (max-width: 1024px) {
@@ -37,12 +40,19 @@ export const LandingGrid = styled.div`
   @media screen and (max-width: 520px) {
     font-size: 1rem;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 `;
 
 export const LandingIntro = styled.section`
-  //width: 40%;
+  @media screen and (max-width: 320px) {
+    margin-top: 7em;
+  }
+  
+  @media screen and (min-width: 321px) and (max-width: 600px) {
+    margin-bottom: 30px;
+    margin-top: 7em;
+  }
   
 `;
 
@@ -83,12 +93,12 @@ export const LandingImgContainer = styled.div`
   margin-top: 100px;
   
   @media screen and (max-width: 320px) {
-    margin-top: 10em;
+    margin-top: 5em;
   }
   
   @media screen and (min-width: 321px) and (max-width: 600px) {
     margin-bottom: 30px;
-    margin-top: 10em;
+    margin-top: 5em;
   }
 `;
 

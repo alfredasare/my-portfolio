@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import {Link} from "gatsby"
 import { gsap, Power4 } from "gsap";
 import {
   AboutSectionContainer,
@@ -41,7 +42,7 @@ const AboutSection = () => {
   }, [])
 
   return (
-    <AboutSectionContainer>
+    <AboutSectionContainer id="about">
       <InnerBlurb>
         <Content className="about-main">
           <ContentHead>A bit about me</ContentHead>
@@ -59,7 +60,7 @@ const AboutSection = () => {
               Also, I co-founded Edanra, an online housing platform that helps people
               find good and affordable homes here in Ghana. I work on the platform
               from time to time if any issues pop up. I am available though for freelance work and you can contact me
-              here.
+              <Link style={{color: "black", fontWeight: "bold", marginLeft: '0'}} to="/#contact">here</Link>.
             </p>
           </ContentParagraph>
           <ContentLinkRow>

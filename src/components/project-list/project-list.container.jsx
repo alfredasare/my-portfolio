@@ -54,9 +54,8 @@ const ProjectListContainer = () => {
       id: uuid(),
       projectName: "Wevops",
       projectCategory: "Portfolio",
-      projectInfo: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eius fugit illum laboriosam magnam quae,
-          quis? Aliquid corporis cupiditate delectus itaque sapiente sint temporibus unde. Cum dolores esse sit
-          veritatis!`,
+      projectInfo: `This website was created for an upcoming start-up called Wevops that specializes in UI design and 
+                    web development. It was created using React and Gsap was used for most of the animations`,
       projectUrl: "https://wevops-portfolio.netlify.app/",
       bgColor: "black",
       fontColor: "white",
@@ -68,9 +67,8 @@ const ProjectListContainer = () => {
       id: uuid(),
       projectName: "Edanra",
       projectCategory: "E-housing",
-      projectInfo: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eius fugit illum laboriosam magnam quae,
-          quis? Aliquid corporis cupiditate delectus itaque sapiente sint temporibus unde. Cum dolores esse sit
-          veritatis!`,
+      projectInfo: `Edanra helps connect home owners with potential tenants. It was made using React and Firebase. Redux was used to
+                    handle state and redux-saga was used as the middleware tio handle asynchronous operations. `,
       projectUrl: "https://www.edanra.com",
       bgColor: "#00695C",
       fontColor: "white",
@@ -82,9 +80,9 @@ const ProjectListContainer = () => {
       id: uuid(),
       projectName: "Design Studios",
       projectCategory: "Portfolio",
-      projectInfo: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eius fugit illum laboriosam magnam quae,
-          quis? Aliquid corporis cupiditate delectus itaque sapiente sint temporibus unde. Cum dolores esse sit
-          veritatis!`,
+      projectInfo: `This website was developed for a design company which specializes in graphic design and
+                    animations. However they are yet to provide their works and site content and hence the use of dummy data. 
+                    It was also developed using React.`,
       projectUrl: "https://drvmroll-design-portfolio.netlify.app/",
       bgColor: "#F2542D",
       fontColor: "white",
@@ -96,9 +94,8 @@ const ProjectListContainer = () => {
       id: uuid(),
       projectName: "Chop Flix",
       projectCategory: "E-commerce",
-      projectInfo: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eius fugit illum laboriosam magnam quae,
-          quis? Aliquid corporis cupiditate delectus itaque sapiente sint temporibus unde. Cum dolores esse sit
-          veritatis!`,
+      projectInfo: `Chop Flix is an ecommerce platform used to sell drum packs for music producers. The site is still in
+                    development. So far the main technology that has been used is React.`,
       projectUrl: "http://chop-flix.netlify.app/",
       bgColor: "#F73558",
       fontColor: "white",
@@ -110,9 +107,8 @@ const ProjectListContainer = () => {
       id: uuid(),
       projectName: "FR Logistics",
       projectCategory: "Business",
-      projectInfo: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eius fugit illum laboriosam magnam quae,
-          quis? Aliquid corporis cupiditate delectus itaque sapiente sint temporibus unde. Cum dolores esse sit
-          veritatis!`,
+      projectInfo: `FR Logistics is a logistics company that provides saf and reliable delivery and warehousing services. 
+                    The platform helps their customers book their services quickly and easily. It was created using HTML, CSS, JavaScript and Django.`,
       projectUrl: "https://www.frlogisticsltd.com",
       bgColor: "white",
       fontColor: "black",

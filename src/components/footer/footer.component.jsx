@@ -22,7 +22,7 @@ const Footer = () => {
         toggleActions: "restart none restart none"
       },
       ease: Power4.easeInOut
-    });
+    })
 
     gsap.from(".footer-second-column", {
       duration: 1.2,
@@ -32,7 +32,7 @@ const Footer = () => {
         toggleActions: "restart none restart none"
       },
       ease: Power4.easeInOut
-    });
+    })
 
     gsap.from(".footer-third-column", {
       duration: 1.4,
@@ -42,7 +42,7 @@ const Footer = () => {
         toggleActions: "restart none restart none"
       },
       ease: Power4.easeInOut
-    });
+    })
 
     gsap.from(".footer-copyright-row", {
       duration: 1.5,
@@ -51,11 +51,11 @@ const Footer = () => {
       scrollTrigger: {
         trigger: ".footer-copyright-row",
         toggleActions: "restart none restart none"
-      },
-    });
+      }
+    })
 
 
-  }, []);
+  }, [])
 
   const data = useStaticQuery(graphql`
       query {
@@ -67,7 +67,7 @@ const Footer = () => {
               }
           }
       }
-  `);
+  `)
 
   return (
     <FooterContainer id="contact">
@@ -76,19 +76,25 @@ const Footer = () => {
           <FirstColumn className="footer-first-column">
             <FirstColumnHead>Let's Talk</FirstColumnHead>
             <FirstColumnText>
-              Feel free to reach out to me at any time. You can reach me through email, on Twitter or Instagram or through Whatsapp.
+              Feel free to reach out to me at any time. You can reach me through email or social media. Can't wait to hear from you
             </FirstColumnText>
             <div><MailMeHead>MAIL ME</MailMeHead></div>
-            <MailMe href="mailto:alfredasare101@gmail.com?subject=Let%20us%20collaborate%20to%20build%20a%20website" target="_blank">alfredasare101@gmail.com</MailMe>
+            <MailMe href="mailto:alfredasare101@gmail.com?subject=Let%20us%20collaborate%20to%20build%20a%20website"
+                    target="_blank">alfredasare101@gmail.com</MailMe>
           </FirstColumn>
           <SecondColumn className="footer-second-column">
             <SecondColumnUl>
               <SecondColumnListItem><h4>Recent Projects</h4></SecondColumnListItem>
-              <SecondColumnListItem><a href="https://wevops-portfolio.netlify.app/" target="_blank" rel="noreferrer">Wevops</a></SecondColumnListItem>
-              <SecondColumnListItem><a href="https://www.edanra.com" target="_blank" rel="noreferrer">Edanra</a></SecondColumnListItem>
-              <SecondColumnListItem><a href="https://drvmroll-design-portfolio.netlify.app/" target="_blank" rel="noreferrer">Design Portfolio</a></SecondColumnListItem>
-              <SecondColumnListItem><a href="http://chop-flix.netlify.app/" target="_blank" rel="noreferrer">ChopFlix</a></SecondColumnListItem>
-              <SecondColumnListItem><a href="https://www.frlogisticsltd.com" target="_blank" rel="noreferrer">FR Logistics</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="https://wevops-portfolio.netlify.app/" target="_blank"
+                                       rel="noreferrer">Wevops</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="https://www.edanra.com" target="_blank"
+                                       rel="noreferrer">Edanra</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="https://drvmroll-design-portfolio.netlify.app/" target="_blank"
+                                       rel="noreferrer">Design Portfolio</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="http://chop-flix.netlify.app/" target="_blank"
+                                       rel="noreferrer">ChopFlix</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="https://www.frlogisticsltd.com" target="_blank" rel="noreferrer">FR
+                Logistics</a></SecondColumnListItem>
             </SecondColumnUl>
           </SecondColumn>
         </FirstAndSecondWrapper>
@@ -97,13 +103,13 @@ const Footer = () => {
             <i className="fab fa-facebook-f" aria-hidden="true"/>
           </FooterIcon>
           <FooterIcon href="https://www.instagram.com/_alfredamoah_/" target="_blank" rel="noreferrer">
-            <i className="fab fa-instagram" aria-hidden="true" />
+            <i className="fab fa-instagram" aria-hidden="true"/>
           </FooterIcon>
           <FooterIcon href="https://www.linkedin.com/in/alfred-asare-amoah-2b31b5142/" target="_blank" rel="noreferrer">
-            <i className="fab fa-linkedin" aria-hidden="true" />
+            <i className="fab fa-linkedin" aria-hidden="true"/>
           </FooterIcon>
           <FooterIcon href="https://github.com/alfredasare" target="_blank" rel="noreferrer">
-            <i className="fab fa-github" aria-hidden="true" />
+            <i className="fab fa-github" aria-hidden="true"/>
           </FooterIcon>
 
         </ThirdColumn>
@@ -113,12 +119,12 @@ const Footer = () => {
         <CopyRight>
           <CopyRightText>&copy; 2020 Alfred Asare </CopyRightText>
         </CopyRight>
-          <FooterLogo to="/">
-            <FooterBrand fluid={data.footerLogo.childImageSharp.fluid}/>
-          </FooterLogo>
+        <FooterLogo to="/">
+          <FooterBrand fluid={data.footerLogo.childImageSharp.fluid}/>
+        </FooterLogo>
       </CopyRightRow>
     </FooterContainer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

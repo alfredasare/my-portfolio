@@ -18,7 +18,7 @@ export const ProjectItemContainer = styled.div`
   }
   
   @media screen and (min-width: 768px) and  (max-width: 1024px) {
-    height: 40vh;
+    height: 45vh;
   }
 `;
 
@@ -37,8 +37,8 @@ export const ProjectInfo = styled.div`
     padding: 70px 50px;
   }
   
-  @media screen and (min-width: 768px) and  (max-width: 1024px) {
-    padding: 30px 50px;
+  @media screen and (min-width: 768px) and  (max-width: 1440px) {
+    padding: 30px 40px;
   }
 `;
 
@@ -64,7 +64,7 @@ export const ProjectHead = styled.h1`
     font-size: 2.0rem;
   }
   
-  @media screen and (min-width: 768px) and  (max-width: 1024px) {
+  @media screen and (min-width: 768px) and  (max-width: 1440px) {
     font-size: 2rem;
   }
 `;
@@ -79,8 +79,8 @@ export const ProjectInfoParagraph = styled.p`
     line-height: 1.5rem;
   }
   
-  @media screen and (min-width: 768px) and  (max-width: 1024px) {
-    font-size: 0.9rem;
+  @media screen and (min-width: 768px) and  (max-width: 1440px) {
+    font-size: 1.0rem;
     line-height: 1.5rem;
   }
 `;
@@ -88,8 +88,8 @@ export const ProjectInfoParagraph = styled.p`
 export const ViewSiteLinkContainer = styled.div`
   margin-top: 60px;
   
-  @media screen and (min-width: 768px) and  (max-width: 1024px) {
-    margin-top: 20px;
+  @media screen and (min-width: 768px) and  (max-width: 1440px) {
+    margin-top: 30px;
   }
 `;
 

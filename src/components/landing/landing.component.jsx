@@ -62,7 +62,7 @@ const Landing = () => {
     <LandingWrapper className="land-wrapper">
       <LandingGrid>
         <LandingIntro className="fade">
-          <LandingIntroText className="intro-text">I'm <Name>Alfred Asare</Name>, a Freelance Web Developer. I enjoy
+          <LandingIntroText className="intro-text">I'm <Name>Alfred Asare</Name>, a Front-end Web Developer. I enjoy
             creating clean and user-friendly web apps that give users delight and satisfaction.</LandingIntroText>
           <CTA to="/#projects" className="cta">View Projects</CTA>
         </LandingIntro>

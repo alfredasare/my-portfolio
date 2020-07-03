@@ -68,7 +68,7 @@ const ProjectListContainer = () => {
       projectName: "Edanra",
       projectCategory: "E-housing",
       projectInfo: `Edanra helps connect home owners with potential tenants. It was made using React and Firebase. Redux was used to
-                    handle state and redux-saga was used as the middleware tio handle asynchronous operations. `,
+                    handle state and redux-saga was used as the middleware to handle asynchronous operations. `,
       projectUrl: "https://www.edanra.com",
       bgColor: "#00695C",
       fontColor: "white",

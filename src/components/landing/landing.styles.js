@@ -37,10 +37,14 @@ export const LandingGrid = styled.div`
   align-items: center;
   grid-gap: 10%;
   
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 600px) {
     font-size: 1rem;
     display: flex;
     flex-direction: column;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1440px) {
+    width: 90%;
   }
 `;
 
@@ -67,7 +71,7 @@ export const LandingIntroText = styled.p`
   }
   
   @media screen and (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 `;
 

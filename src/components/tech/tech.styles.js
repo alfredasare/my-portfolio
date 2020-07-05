@@ -30,6 +30,11 @@ export const TechParagraph = styled.h3`
   color: #878a8f;
   width: 60%;
   margin: 20px auto 0 auto;
+  
+  @media screen and (max-width: 600px) {
+    width: 90%;
+    margin: 30px auto 0 auto;
+  }
 `;
 
 export const TechGrid = styled.div`

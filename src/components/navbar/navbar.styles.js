@@ -29,8 +29,7 @@ export const NavBarRow = styled.div`
 export const NavBarBrand = styled(Link)`
   width: auto;
   z-index: 10;
- 
-  
+  pointer-events: ${({open}) => open ? 'none' : 'unset'};
 `;
 
 export const BrandLogo = styled(Img)`

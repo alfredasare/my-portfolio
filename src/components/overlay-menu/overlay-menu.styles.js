@@ -37,12 +37,21 @@ export const StyledMenu = styled.div`
 export const MenuLink = styled(Link)`
   margin-bottom: 10vh;
   padding: 0;
+  //margin-bottom: 5vh;
+  //padding: 0;
+  //
+  //@media screen and (min-width: 768px) {
+  //  margin-bottom: 8vh;
+  //}
+  //
+  //@media screen and (min-width: 1440px) {
+  //  margin-bottom: 7vh;
+  //}
 `;
 
 export const MenuContent = styled.h4`
   color: rgba(0,0,0,0.6);
   font-size: 2rem;
-  //padding-bottom: 10vh;
   cursor: pointer;
   transition: color 0.2s ease-in;
   position: relative;

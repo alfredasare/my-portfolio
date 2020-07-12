@@ -48,15 +48,14 @@ const AboutSection = () => {
           <ContentHead>A bit about me</ContentHead>
           <ContentParagraph>
             <p>
-              Hi! I'm Alfred Asare, a front-end web developer with about
-              2 years of experience currently living in Tema - Ghana.
-            </p>
-            <p>
-              I am very fascinated and passionate about user interface design as well
-              as user experience design. I like to design and code clean, simple and minimalistic
+              Hi! I'm Alfred Asare, a front-end web developer currently living in Tema - Ghana.
+              I like to design and code clean, simple and minimalistic
               UI that are aesthetically pleasing and satisfying to use. Though I work mainly on the front-end,
               I have some experience with backend technologies as well.
             </p>
+
+
+
             <p>
               Also, I co-founded Edanra, an online housing platform that helps people
               find good and affordable homes here in Ghana. I work on the platform

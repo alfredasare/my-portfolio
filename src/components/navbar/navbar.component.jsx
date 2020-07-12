@@ -33,7 +33,7 @@ const NavBar = () => {
     <NavBarContainer>
       <OverlayMenu open={open} setOpen={setOpen}/>
       <NavBarRow>
-        <NavBarBrand to="/">
+        <NavBarBrand open={open} to="/">
           <BrandLogo fluid={data.logo.childImageSharp.fluid}/>
         </NavBarBrand>
         <NavMenuContainer>

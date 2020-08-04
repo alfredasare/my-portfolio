@@ -7,6 +7,7 @@ export const AboutSectionContainer = styled.section`
   width: 100%;
   padding: 48px 0;
   position: relative;
+  overflow-x: hidden;
   
     @media screen and (max-width: 600px) {
       margin-top: 60px;

@@ -35,11 +35,11 @@ const OverlayMenu = ({open, setOpen}) => {
           Contact
         </MenuContent>
       </MenuLink>
-      {/*<MenuLink to="/blog">*/}
-      {/*  <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>*/}
-      {/*    Blog*/}
-      {/*  </MenuContent>*/}
-      {/*</MenuLink>*/}
+      <MenuLink to="/blog">
+        <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
+          Blog
+        </MenuContent>
+      </MenuLink>
       <OverlayMenuSocial>
         <OverlayMenuSocialLink href="https://web.facebook.com/alfred.asareamoah" target="_blank" rel="noreferrer">
           <i className="fab fa-facebook-f" aria-hidden="true"/>

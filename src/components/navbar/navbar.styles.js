@@ -13,6 +13,10 @@ export const NavBarContainer = styled.nav`
   z-index: 50;
   background-color: white;
   transition: top 90ms linear, padding 90ms linear;
+  
+  @media screen and (max-width: 600px) {
+    padding: 30px 20px;
+  }
 `;
 
 

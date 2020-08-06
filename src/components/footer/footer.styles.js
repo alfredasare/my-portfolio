@@ -68,7 +68,7 @@ export const FirstColumnHead = styled.h2`
     font-size: 2rem;
   }
   
-  @media screen and (min-width: 601px) and (max-width: 1024px) {
+  @media screen and (min-width: 601px) and (max-width: 1280px) {
     font-size: 2rem;
   }
 `;

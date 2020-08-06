@@ -8,7 +8,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug
+      value: `/blog${slug}`
     })
   }
 }
@@ -17,11 +17,15 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: {fields: [frontmatter___date], order: ASC}) {
         edges {
           node {
             fields {
               slug
+            }
+            frontmatter {
+                date(formatString: "DD MMMM, YYYY")
+                title
             }
           }
         }
@@ -29,12 +33,16 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const posts = result.data.allMarkdownRemark.edges;
+
+  posts.forEach(({ node }, index) => {
     createPage({
-      path: `node.fields.slug`,
+      path: node.fields.slug,
       component: path.resolve(`./src/templates/blog-post.js`),
       context: {
-        slug: node.fields.slug
+        slug: node.fields.slug,
+        prev: index === 0 ? null : posts[index - 1].node,
+        next: index === posts.length - 1 ? null : posts[index + 1].node
       }
     })
   })

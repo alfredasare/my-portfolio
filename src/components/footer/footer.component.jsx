@@ -9,10 +9,16 @@ import {
 } from "./footer.styles"
 import { graphql, useStaticQuery } from "gatsby"
 import { gsap, Power4 } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const Footer = () => {
 
   useEffect(() => {
+
+    if (typeof window !== `undefined`) {
+      gsap.registerPlugin(ScrollTrigger)
+      gsap.core.globals("ScrollTrigger", ScrollTrigger)
+    }
 
     gsap.from(".footer-first-column", {
       duration: 1,

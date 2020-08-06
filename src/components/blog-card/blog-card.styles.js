@@ -31,7 +31,6 @@ export const BlogCardContainer = styled.div`
     font-size: 1.2rem;
     @media screen and (max-width: 600px) {
       width: 90%;
-      text-align: center;
     }
     
     @media screen and (min-width: 768px) and (max-width: 1200px) {

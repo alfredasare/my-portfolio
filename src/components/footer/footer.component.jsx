@@ -91,7 +91,7 @@ const Footer = () => {
           <SecondColumn className="footer-second-column">
             <SecondColumnUl>
               <SecondColumnListItem><h4>Recent Projects</h4></SecondColumnListItem>
-              <SecondColumnListItem><a href="https://wevops-portfolio.netlify.app/" target="_blank"
+              <SecondColumnListItem><a href="https://wevops.co/" target="_blank"
                                        rel="noreferrer">Wevops</a></SecondColumnListItem>
               <SecondColumnListItem><a href="https://www.edanra.com" target="_blank"
                                        rel="noreferrer">Edanra</a></SecondColumnListItem>

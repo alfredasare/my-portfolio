@@ -64,7 +64,7 @@ const ProjectListContainer = () => {
       projectCategory: "Portfolio",
       projectInfo: `This website was created for an upcoming start-up called Wevops that specializes in UI design and 
                     web development. It was created using React and Gsap was used for most of the animations`,
-      projectUrl: "https://wevops-portfolio.netlify.app/",
+      projectUrl: "https://wevops.co/",
       bgColor: "black",
       fontColor: "white",
       linkBg: "white",

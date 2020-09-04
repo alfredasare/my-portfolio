@@ -7,7 +7,7 @@ const ProjectListContainer = () => {
 
   const data = useStaticQuery(graphql`
       query {
-          ds: file(relativePath: { eq: "ds1.jpg"}) {
+          ds: file(relativePath: { eq: "design_studios.png"}) {
               childImageSharp {
                   fluid(maxWidth: 2000) {
                       ...GatsbyImageSharpFluid
@@ -15,7 +15,7 @@ const ProjectListContainer = () => {
               }
           }
 
-          chop: file(relativePath: { eq: "chop2.jpg"}) {
+          chop: file(relativePath: { eq: "chop_flix.png"}) {
               childImageSharp {
                   fluid(maxWidth: 2000) {
                       ...GatsbyImageSharpFluid
@@ -23,7 +23,7 @@ const ProjectListContainer = () => {
               }
           }
 
-          edanra: file(relativePath: { eq: "edanra2.jpeg"}) {
+          edanra: file(relativePath: { eq: "edanra.png"}) {
               childImageSharp {
                   fluid(maxWidth: 2000) {
                       ...GatsbyImageSharpFluid
@@ -31,15 +31,23 @@ const ProjectListContainer = () => {
               }
           }
 
-          fr: file(relativePath: { eq: "fr2.png"}) {
+          fr: file(relativePath: { eq: "fr_logistics.png"}) {
               childImageSharp {
-                  fluid(maxWidth: 1300) {
+                  fluid(maxWidth: 2000) {
                       ...GatsbyImageSharpFluid
                   }
               }
           }
 
           wevops: file(relativePath: { eq: "wevops.png"}) {
+              childImageSharp {
+                  fluid(maxWidth: 2000) {
+                      ...GatsbyImageSharpFluid
+                  }
+              }
+          }
+          
+          qube: file(relativePath: {eq: "qube_pcs.png"}) {
               childImageSharp {
                   fluid(maxWidth: 2000) {
                       ...GatsbyImageSharpFluid
@@ -92,6 +100,19 @@ const ProjectListContainer = () => {
     },
     {
       id: uuid(),
+      projectName: "FR Logistics",
+      projectCategory: "Business",
+      projectInfo: `FR Logistics is a logistics company that provides saf and reliable delivery and warehousing services. 
+                    The platform helps their customers book their services quickly and easily. It was created using HTML, CSS, JavaScript and Django.`,
+      projectUrl: "https://www.frlogisticsltd.com",
+      bgColor: "white",
+      fontColor: "black",
+      linkBg: "black",
+      linkColor: "white",
+      img: data.fr.childImageSharp.fluid
+    },
+    {
+      id: uuid(),
       projectName: "Chop Flix",
       projectCategory: "E-commerce",
       projectInfo: `Chop Flix is an ecommerce platform used to sell drum packs for music producers. The site is still in
@@ -105,16 +126,16 @@ const ProjectListContainer = () => {
     },
     {
       id: uuid(),
-      projectName: "FR Logistics",
-      projectCategory: "Business",
-      projectInfo: `FR Logistics is a logistics company that provides saf and reliable delivery and warehousing services. 
-                    The platform helps their customers book their services quickly and easily. It was created using HTML, CSS, JavaScript and Django.`,
-      projectUrl: "https://www.frlogisticsltd.com",
+      projectName: "Qube PCS",
+      projectCategory: "Consultancy",
+      projectInfo: `QUBE PCS is an internationally experienced professional services company that supports global organisations that wish to invest in, own and operate assets. 
+                    It was created using GatsbyJS`,
+      projectUrl: "https://qubepcs.com/",
       bgColor: "white",
       fontColor: "black",
       linkBg: "black",
       linkColor: "white",
-      img: data.fr.childImageSharp.fluid
+      img: data.qube.childImageSharp.fluid
     }
   ];
 

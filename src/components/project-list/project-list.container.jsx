@@ -102,7 +102,7 @@ const ProjectListContainer = () => {
       id: uuid(),
       projectName: "FR Logistics",
       projectCategory: "Business",
-      projectInfo: `FR Logistics is a logistics company that provides saf and reliable delivery and warehousing services. 
+      projectInfo: `FR Logistics is a logistics company that provides safe and reliable delivery and warehousing services. 
                     The platform helps their customers book their services quickly and easily. It was created using HTML, CSS, JavaScript and Django.`,
       projectUrl: "https://www.frlogisticsltd.com",
       bgColor: "white",
@@ -129,7 +129,7 @@ const ProjectListContainer = () => {
       projectName: "Qube PCS",
       projectCategory: "Consultancy",
       projectInfo: `QUBE PCS is an internationally experienced professional services company that supports global organisations that wish to invest in, own and operate assets. 
-                    It was created using GatsbyJS`,
+                    It was created using GatsbyJS.`,
       projectUrl: "https://qubepcs.com/",
       bgColor: "white",
       fontColor: "black",

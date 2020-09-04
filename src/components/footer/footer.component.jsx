@@ -101,6 +101,7 @@ const Footer = () => {
                                        rel="noreferrer">ChopFlix</a></SecondColumnListItem>
               <SecondColumnListItem><a href="https://www.frlogisticsltd.com" target="_blank" rel="noreferrer">FR
                 Logistics</a></SecondColumnListItem>
+              <SecondColumnListItem><a href="https://www.qubepcs.com" target="_blank" rel="noreferrer">Qube PCS</a></SecondColumnListItem>
             </SecondColumnUl>
           </SecondColumn>
         </FirstAndSecondWrapper>

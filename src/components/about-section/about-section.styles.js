@@ -58,9 +58,19 @@ export const ContentParagraph = styled.div`
   line-height: 1.5rem;
   font-weight: 400;
   margin: 40px 0 72px;
+  color: ${({theme}) => theme.primaryFont};
+  
+  a {
+    color: ${({theme}) => theme.primaryFont};
+    font-weight: bold;
+    margin-left: 0;
+    text-decoration: underline;
+  }
 `;
 
-export const ContentLinkRow = styled.div``;
+export const ContentLinkRow = styled.div`
+  margin-top: -50px;
+`;
 
 export const ContentLink = styled(Link)`
   font-weight: bold;
@@ -68,11 +78,11 @@ export const ContentLink = styled(Link)`
   letter-spacing: 1.5px;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: ${({theme}) => theme.primaryFont};
   transition: color 0.2s ease-in-out;
   
   &:hover {
-    color: ${bitterSweet};
+    color: ${({theme}) => theme.primaryColor};
   }
 `;
 

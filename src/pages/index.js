@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import SEO from "../components/seo"
 import WrapperComponent from "../components/wrapper/wrapper.component"
 import Landing from "../components/landing/landing.component"
-import NavBar from "../components/navbar/navbar.component"
 import Footer from "../components/footer/footer.component"
 import { NavBarScroll } from "../utils/navbar-scroll"
 import AboutSection from "../components/about-section/about-section.component"
@@ -26,14 +25,19 @@ export default () => {
 
   return (
     <WrapperComponent>
-      <SEO title="Alfred Asare"/>
-      <Cursor/>
-      <NavBar/>
-      <Landing/>
-      <AboutSection/>
-      <Tech/>
-      <ProjectListContainer/>
-      <Footer/>
+      {
+        (theme) => (
+          <>
+            <SEO title="Alfred Asare"/>
+            <Cursor/>
+            <Landing/>
+            <AboutSection/>
+            <Tech/>
+            <ProjectListContainer theme={theme}/>
+            <Footer/>
+          </>
+        )
+      }
     </WrapperComponent>
   )
 };

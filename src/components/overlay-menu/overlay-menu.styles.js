@@ -7,7 +7,7 @@ export const StyledMenu = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: ${({theme}) => theme.backgroundColor};
   height: 100vh;
   width: 100%;
   padding: 2rem;
@@ -48,14 +48,14 @@ export const MenuLink = styled(Link)`
 `;
 
 export const MenuContent = styled.h4`
-  color: rgba(0,0,0,0.6);
+  color: ${({theme}) => theme.navLink};
   font-size: 2rem;
   cursor: pointer;
   transition: color 0.2s ease-in;
   position: relative;
   
   @media screen and (max-width: 1024px) {
-    color: black;
+    color: ${({theme}) => theme.navLinkHover};
   }
   
   &:before {
@@ -76,7 +76,7 @@ export const MenuContent = styled.h4`
     }
   
   &:hover{
-    color: black;
+    color: ${({theme}) => theme.navLinkHover};
     
     &:before {
       opacity: 1;
@@ -109,7 +109,7 @@ export const OverlayMenuSocialLink = styled.a`
   width: 90px;
   line-height: 90px;
   text-align: center;
-  color: black;
+  color: ${({theme}) => theme.socialLink};
   
   &:hover {
     i {

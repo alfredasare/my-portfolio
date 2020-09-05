@@ -50,7 +50,7 @@ export const ProjectCategory = styled.span`
   padding: 0.6rem 0.7rem;
   font-size: .75rem;
   color: black;
-  background-color: #F4F5F6;
+  background-color: #e7e7e7;
   width: 100%;
   margin-top: 100px;
   font-weight: bold;

@@ -23,12 +23,14 @@ export const BlogCardContainer = styled.div`
     }  
 
   p {
-    color: rgba(0,0,0,0.6);
+    color: ${({theme}) => theme.blogExcerpt};
     font-weight: 600;
   }
   
   h2 {
     font-size: 1.2rem;
+    color: ${({theme}) => theme.primaryFont};
+    
     @media screen and (max-width: 600px) {
       width: 90%;
     }

@@ -51,12 +51,11 @@ const Footer = () => {
     })
 
     gsap.from(".footer-copyright-row", {
-      duration: 1.5,
+      duration: 1.2,
       opacity: 0,
       y: 50,
       scrollTrigger: {
-        trigger: ".footer-copyright-row",
-        toggleActions: "restart none restart none"
+        trigger: ".footer-copyright-row"
       }
     })
 
@@ -84,7 +83,7 @@ const Footer = () => {
             <FirstColumnText>
               Feel free to reach out to me at any time. You can reach me through email or social media. Can't wait to hear from you
             </FirstColumnText>
-            <div><MailMeHead>MAIL ME</MailMeHead></div>
+            <div><MailMeHead>EMAIL ME</MailMeHead></div>
             <MailMe href="mailto:alfredasare101@gmail.com?subject=Let%20us%20collaborate%20to%20build%20a%20website"
                     target="_blank">alfredasare101@gmail.com</MailMe>
           </FirstColumn>

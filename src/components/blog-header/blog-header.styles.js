@@ -17,10 +17,11 @@ export const BlogHeaderContainer = styled.section`
   
   h1 {
     font-size: 2.5rem;
+    color: ${({theme}) => theme.primaryFont};
   }
   
   h3 {
-    color: rgba(0,0,0,0.4);
+    color: ${({theme}) => theme.blogSubHead};
     width: 60%;
     margin-left: auto;
     margin-right: auto;

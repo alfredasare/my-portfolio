@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import ProjectList from "./project-list.component"
 import uuid from 'react-uuid'
 
-const ProjectListContainer = () => {
+const ProjectListContainer = ({theme}) => {
 
   const data = useStaticQuery(graphql`
       query {
@@ -78,8 +78,8 @@ const ProjectListContainer = () => {
       projectInfo: `Edanra helps connect home owners with potential tenants. It was made using React and Firebase. Redux was used to
                     handle state and redux-saga was used as the middleware to handle asynchronous operations. `,
       projectUrl: "https://www.edanra.com",
-      bgColor: "white",
-      fontColor: "black",
+      bgColor: `${ theme === "dark" ? "#404040" : "#f7f7f7"}`,
+      fontColor: `${theme === "dark" ? "#ffffff" : "#000000"}`,
       linkBg: "black",
       linkColor: "white",
       img: data.edanra.childImageSharp.fluid
@@ -105,8 +105,8 @@ const ProjectListContainer = () => {
       projectInfo: `FR Logistics is a logistics company that provides safe and reliable delivery and warehousing services. 
                     The platform helps their customers book their services quickly and easily. It was created using HTML, CSS, JavaScript and Django.`,
       projectUrl: "https://www.frlogisticsltd.com",
-      bgColor: "white",
-      fontColor: "black",
+      bgColor: `${ theme === "dark" ? "#404040" : "#f7f7f7"}`,
+      fontColor: `${theme === "dark" ? "#ffffff" : "#000000"}`,
       linkBg: "black",
       linkColor: "white",
       img: data.fr.childImageSharp.fluid
@@ -131,8 +131,8 @@ const ProjectListContainer = () => {
       projectInfo: `QUBE PCS is an internationally experienced professional services company that supports global organisations that wish to invest in, own and operate assets. 
                     It was created using GatsbyJS.`,
       projectUrl: "https://qubepcs.com/",
-      bgColor: "white",
-      fontColor: "black",
+      bgColor: `${ theme === "dark" ? "#404040" : "#f7f7f7"}`,
+      fontColor: `${theme === "dark" ? "#ffffff" : "#000000"}`,
       linkBg: "black",
       linkColor: "white",
       img: data.qube.childImageSharp.fluid

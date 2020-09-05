@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         overflow-x: hidden;
         scroll-behavior: smooth;
-        cursor: url("data:image/svg+xml,%3Csvg height='12' width='12' viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7' cy='7' fill='%23000' r='7'/%3E%3C/svg%3E") 6 6, auto;
+        cursor: url("data:image/svg+xml,%3Csvg height='12' width='12' viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='7' cy='7' fill='%23FF6553' r='7'/%3E%3C/svg%3E") 6 6, auto;
     }
     
     *, *:before, *:after {
@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         font-family: 'Nunito Sans', sans-serif;
+        background-color: ${({theme}) => theme.backgroundColor};
     }
     
     h1,h2,h3,h4,h5,h6 {
@@ -78,7 +79,7 @@ export const GlobalStyle = createGlobalStyle`
       right: 0;
       bottom: 0;
       border-radius: var(--radius);
-      border: 2px solid #FF6553;
+      border: 2px solid ${({theme}) => theme.primaryColor};
       opacity: var(--scale);
       -webkit-transform: scale(var(--scale));
       transform: scale(var(--scale));

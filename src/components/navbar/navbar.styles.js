@@ -11,7 +11,7 @@ export const NavBarContainer = styled.nav`
   padding: 50px;
   color: black;
   z-index: 50;
-  background-color: white;
+  background-color: ${({theme}) => theme.backgroundColor};
   transition: top 90ms linear, padding 90ms linear;
   
   @media screen and (max-width: 600px) {
@@ -54,8 +54,24 @@ export const NavMenuText = styled.h5`
   font-size: 1rem;
   margin-right: 1rem;
   cursor: pointer;
+  color: ${({theme}) => theme.menuText}
 `;
 
 export const NavMenuIcon = styled.div`
   
+`;
+
+export const ThemeButton = styled.div`
+  margin-left: 2rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  
+  
+  img {
+    height: 80%;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
 `;

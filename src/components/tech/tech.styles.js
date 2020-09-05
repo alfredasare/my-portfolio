@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const TechContainer = styled.section`
   height: 100%;
   width: 100%;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid ${({theme}) => theme.borderColor};
+  border-bottom: 1px solid ${({theme}) => theme.borderColor};
 `;
 
 export const InnerTechContainer = styled.div`
@@ -14,7 +14,7 @@ export const InnerTechContainer = styled.div`
 `;
 
 export const SmallTechHead = styled.h5`
-  color: #878a8f;
+  color: ${({theme}) => theme.secondaryFont};
   font-weight: lighter;
   margin-bottom: 20px;
   font-size: 1rem;
@@ -24,10 +24,11 @@ export const SmallTechHead = styled.h5`
 
 export const TechHead = styled.h1`
   font-size: 2.5rem;
+  color: ${({theme}) => theme.primaryFont}
 `;
 
 export const TechParagraph = styled.h3`
-  color: #878a8f;
+  color: ${({theme}) => theme.secondaryFont};
   width: 60%;
   margin: 20px auto 0 auto;
   
@@ -58,4 +59,5 @@ export const TechItem = styled.div`
 
 export const TechItemText = styled.h4`
   margin-top: 10px;
+  color: ${({theme}) => theme.primaryFont}
 `;

@@ -36,7 +36,6 @@ const AboutSection = () => {
       x: 30,
       ease: Power4.easeInOut,
       duration: 1,
-      // delay: 5.8
     })
 
   }, [])
@@ -53,14 +52,11 @@ const AboutSection = () => {
               UI that are aesthetically pleasing and satisfying to use. Though I work mainly on the front-end,
               I have some experience with backend technologies as well.
             </p>
-
-
-
             <p>
               Also, I co-founded Edanra, an online housing platform that helps people
               find good and affordable homes here in Ghana. I work on the platform
               from time to time if any issues pop up. I am available though for freelance work and you can contact me
-              <Link style={{color: "black", fontWeight: "bold", marginLeft: '0'}} to="/#contact">here</Link>.
+              <Link to="/#contact">here</Link>.
             </p>
           </ContentParagraph>
           <ContentLinkRow>

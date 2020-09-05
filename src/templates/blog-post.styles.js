@@ -6,6 +6,16 @@ export const BlogPostWrapper = styled.div`
   margin: 130px auto 0 auto;
   position: relative;
   
+  li {
+    a {
+      color: ${({theme}) => theme.blogLink};
+      
+      &:hover {
+        color: ${({theme}) => theme.blogLinkHover};
+      }
+    } 
+  }
+  
   @media screen and (max-width: 600px) {
     width: 90%;
   }
@@ -16,20 +26,25 @@ export const BlogPostWrapper = styled.div`
 `;
 
 export const BackLink = styled(Link)`
-  color: rgba(0,0,0,0.5);
+  color: ${({theme}) => theme.blogLink};
   font-size: 1.2rem;
   font-weight: bold;
+  
+  &:hover {
+    color: ${({theme}) => theme.blogLinkHover};
+  }
 `;
 
 export const BlogPostHead = styled.h1`
   margin-top: 40px;
   text-align: center;
+  color: ${({theme}) => theme.primaryFont};
 `;
 
 export const BlogPostDate = styled.p`
   text-align: center;
   font-weight: bold;
-  color: rgba(0,0,0,0.6);
+  color: ${({theme}) => theme.secondaryFont};
   margin-top: 0;
 `;
 
@@ -37,6 +52,7 @@ export const BlogContent = styled.section`
   width: 70%;
   margin: 50px auto 0 auto;
   font-size: 1.1rem;
+  color: ${({theme}) => theme.primaryFont};
   
   deckgo-highlight-code {
     font-size: 1rem;
@@ -85,7 +101,7 @@ export const PostNavWrapper = styled.div`
   }
   
   a {
-    color: rgba(0,0,0,0.6);
+    color: ${({theme}) => theme.blogLink};
     transition: color 0.2s ease-in-out;
     
     @media screen and (max-width: 600px) {
@@ -98,7 +114,7 @@ export const PostNavWrapper = styled.div`
     }
     
     &:hover {
-      color: rgba(0,0,0,1.0);
+      color: ${({theme}) => theme.blogLinkHover};
     }
   }
 `;

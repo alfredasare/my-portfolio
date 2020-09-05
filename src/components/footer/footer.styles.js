@@ -1,16 +1,16 @@
 import styled from "styled-components";
-import { bitterSweet, grey } from "../../utils/colors"
+import { bitterSweet } from "../../utils/colors"
 import { Link } from "gatsby"
 import Img from 'gatsby-image'
 
 export const FooterContainer = styled.footer`
   height: 100%;
   width: 100%;
-  background-color: white;
+  background-color: ${({theme}) => theme.backgroundColor};
   color: black;
   margin-top: 30px;
   padding: 100px;
-  border-top: 1px solid rgba(0,0,0,0.1);
+  border-top: 1px solid ${({theme}) => theme.borderColor};
   
   @media screen and (max-width: 600px) {
     padding: 40px;
@@ -63,6 +63,7 @@ export const FirstColumn = styled.div`
 
 export const FirstColumnHead = styled.h2`
   font-size: 4rem;
+  color: ${({theme}) => theme.primaryFont};
   
   @media screen and (max-width: 600px) {
     font-size: 2rem;
@@ -75,6 +76,7 @@ export const FirstColumnHead = styled.h2`
 
 export const FirstColumnText = styled.p`
   font-size: 1.7rem;
+  color: ${({theme}) => theme.primaryFont};
   
   @media screen and (min-width: 601px) and (max-width: 1024px) {
     font-size: 1.4rem;
@@ -82,14 +84,14 @@ export const FirstColumnText = styled.p`
 `;
 
 export const MailMeHead = styled.h4`
-  color: ${grey};
+  color: ${({theme}) => theme.fadedFooterText};
   margin-bottom: 40px;
 `;
 
 export const MailMe = styled.a`
-  color: black;
+  color: ${({theme}) => theme.primaryFont};
   padding: 20px 30px;
-  border: 3px solid black;
+  border: 3px solid ${({theme}) => theme.primaryFont};
 `;
 
 export const SecondColumn = styled.div``;
@@ -101,9 +103,10 @@ export const SecondColumnUl = styled.ul`
 
 export const SecondColumnListItem = styled.li`
   margin: 5px;
+  color: ${({theme}) => theme.primaryFont};
   
   a {
-    color: black;
+    color: ${({theme}) => theme.primaryFont};
     transition: color 0.2s ease-in-out;
     
     &:hover {
@@ -135,7 +138,7 @@ export const FooterIcon = styled.a`
   line-height: 90px;
   text-align: center;
   vertical-align: middle;
-  color: black;
+  color: ${({theme}) => theme.primaryFont};
   
   &:hover {
     i {
@@ -172,7 +175,7 @@ export const CopyRight = styled.div``;
 export const CopyRightText = styled.p`
   margin-bottom: 0;
   padding-bottom: 0;
-  color: ${grey};
+  color: ${({theme}) => theme.fadedFooterText};
   font-weight: bold;
   font-size: 1.2rem;
   

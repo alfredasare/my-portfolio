@@ -6,14 +6,14 @@ import {
   NavBarRow,
   NavMenuContainer,
   NavMenuIcon,
-  NavMenuText
+  ThemeButton
 } from "./navbar.styles"
 import Burger from "../burger/burger.component"
 import OverlayMenu from "../overlay-menu/overlay-menu.component"
 import { graphql, useStaticQuery } from "gatsby"
 
 
-const NavBar = () => {
+const NavBar = ({theme, toggleTheme}) => {
 
   const [open, setOpen] = useState(false);
 
@@ -37,12 +37,20 @@ const NavBar = () => {
           <BrandLogo fluid={data.logo.childImageSharp.fluid}/>
         </NavBarBrand>
         <NavMenuContainer>
-          <NavMenuText onClick={() => setOpen(!open)}>
-            {open ? 'Close': 'Menu'}
-          </NavMenuText>
+          {/*<NavMenuText onClick={() => setOpen(!open)}>*/}
+          {/*  {open ? 'Close': 'Menu'}*/}
+          {/*</NavMenuText>*/}
           <NavMenuIcon>
             <Burger open={open} setOpen={setOpen}/>
           </NavMenuIcon>
+          <ThemeButton onClick={() => toggleTheme()} className="theme">
+            {
+              theme !== "dark"
+                ? <img src={require("../../assets/images/darkmode.e2b27f9b.svg")} alt=""/>
+                : <img src={require("../../assets/images/wb_sunny-24px.svg")} alt=""/>
+            }
+          </ThemeButton>
+
         </NavMenuContainer>
       </NavBarRow>
     </NavBarContainer>

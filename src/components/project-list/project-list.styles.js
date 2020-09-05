@@ -15,7 +15,7 @@ export const ProjectListContainer = styled.section`
 `;
 
 export const SmallProjectListHead = styled.h5`
-  color: #878a8f;
+  color: ${({theme}) => theme.secondaryFont};
   font-weight: lighter;
   margin-bottom: 20px;
   font-size: 1rem;
@@ -28,4 +28,5 @@ export const ProjectListHead = styled.h1`
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 50px;
+  color: ${({theme}) => theme.primaryFont}
 `;

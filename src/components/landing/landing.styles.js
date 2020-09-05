@@ -7,7 +7,7 @@ export const LandingWrapper = styled.header`
   width: 100%;
   height: 100vh;
   color: black;
-  background-color: white;
+  background-color: ${({theme}) => theme.backgroundColor};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,6 +65,7 @@ export const LandingIntroText = styled.p`
   width: 100%;
   font-weight: 700;
   margin-bottom: 60px;
+  color: ${({theme}) => theme.primaryFont};
   
   @media screen and (max-width: 520px) {
     font-size: 1rem;

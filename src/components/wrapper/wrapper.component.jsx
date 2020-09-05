@@ -10,12 +10,8 @@ import NavBar from "../navbar/navbar.component"
 const WrapperComponent = ({ children }) => {
 
   let wrapper = useRef(null)
-  const initialTheme = () => {
-    if (typeof window !== `undefined`) {
-      return window.localStorage.getItem("theme") || "default";
-    }
-  };
-  const [theme, setCurrentTheme] = useState(initialTheme());
+
+  const [theme, setCurrentTheme] = useState("default");
 
   const setTheme = () => {
     if (typeof window !== `undefined`) {

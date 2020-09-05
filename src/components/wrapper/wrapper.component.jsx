@@ -10,7 +10,12 @@ import NavBar from "../navbar/navbar.component"
 const WrapperComponent = ({ children }) => {
 
   let wrapper = useRef(null)
-  const [theme, setCurrentTheme] = useState(typeof window !== `undefined` ? window.localStorage.getItem("theme") || "default": "");
+  const initialTheme = () => {
+    if (typeof window !== `undefined`) {
+      return window.localStorage.getItem("theme") || "default";
+    }
+  };
+  const [theme, setCurrentTheme] = useState(initialTheme());
 
   const setTheme = () => {
     if (typeof window !== `undefined`) {
@@ -25,12 +30,17 @@ const WrapperComponent = ({ children }) => {
   }
 
   useEffect(() => {
-    if (typeof window !== `undefined`) {
-      window.localStorage.getItem("theme") || window.localStorage.setItem("theme", "default");
-      setCurrentTheme(window.localStorage.getItem("theme"));
-    }
+    // if (typeof window !== `undefined`) {
+    //   if (window.localStorage.getItem("theme")) {
+    //     setCurrentTheme(window.localStorage.getItem("theme"));
+    //   } else {
+    //     setCurrentTheme("default");
+    //     window.localStorage.setItem("theme", "default");
+    //   }
+    // }
+    console.log(theme);
     TweenLite.to(wrapper, 0, { css: { visibility: "visible" } })
-  }, [])
+  }, [setCurrentTheme, theme])
 
   return (
     <ThemeProvider theme={theme === "default" ? defaultTheme : darkTheme}>

@@ -7,7 +7,6 @@ export const LandingWrapper = styled.header`
   width: 100%;
   height: 100vh;
   color: black;
-  background-color: ${({theme}) => theme.backgroundColor};
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -30,11 +30,13 @@ const WrapperComponent = ({ children }) => {
   }
 
   useEffect(() => {
-    if (theme === "default") setCurrentTheme("default");
     if (typeof window !== `undefined`) {
-      if (window.localStorage.getItem("theme")) {
-        setCurrentTheme(window.localStorage.getItem("theme"));
-      } else {
+      if (window.localStorage.getItem("theme") === "default") {
+        setCurrentTheme("default");
+      } else if (window.localStorage.getItem("theme") === "dark"){
+        setCurrentTheme("dark");
+      } else if (window.localStorage.getItem("theme") === null) {
+        setCurrentTheme("default");
         window.localStorage.setItem("theme", "default");
       }
     }

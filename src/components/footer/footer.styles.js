@@ -6,7 +6,6 @@ import Img from 'gatsby-image'
 export const FooterContainer = styled.footer`
   height: 100%;
   width: 100%;
-  background-color: ${({theme}) => theme.backgroundColor};
   color: black;
   margin-top: 30px;
   padding: 100px;

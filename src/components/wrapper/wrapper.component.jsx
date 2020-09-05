@@ -30,14 +30,14 @@ const WrapperComponent = ({ children }) => {
   }
 
   useEffect(() => {
-    // if (typeof window !== `undefined`) {
-    //   if (window.localStorage.getItem("theme")) {
-    //     setCurrentTheme(window.localStorage.getItem("theme"));
-    //   } else {
-    //     setCurrentTheme("default");
-    //     window.localStorage.setItem("theme", "default");
-    //   }
-    // }
+    if (typeof window !== `undefined`) {
+      if (window.localStorage.getItem("theme")) {
+        setCurrentTheme(window.localStorage.getItem("theme"));
+      } else {
+        setCurrentTheme("default");
+        window.localStorage.setItem("theme", "default");
+      }
+    }
     console.log(theme);
     TweenLite.to(wrapper, 0, { css: { visibility: "visible" } })
   }, [setCurrentTheme, theme])

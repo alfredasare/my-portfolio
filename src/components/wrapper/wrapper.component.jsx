@@ -33,8 +33,10 @@ const WrapperComponent = ({ children }) => {
     if (typeof window !== `undefined`) {
       if (window.localStorage.getItem("theme") === "default") {
         setCurrentTheme("default");
+        window.localStorage.setItem("theme", "default")
       } else if (window.localStorage.getItem("theme") === "dark"){
         setCurrentTheme("dark");
+        window.localStorage.setItem("theme", "dark")
       } else if (window.localStorage.getItem("theme") === null) {
         setCurrentTheme("default");
         window.localStorage.setItem("theme", "default");

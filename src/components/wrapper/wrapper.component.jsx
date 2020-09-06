@@ -12,7 +12,7 @@ const WrapperComponent = ({ children }) => {
 
   let wrapper = useRef(null)
   let initialTheme = window.localStorage.getItem("theme") || "default";
-  const [theme, setCurrentTheme] = useState("default")
+  const [theme, setCurrentTheme] = useState(initialTheme)
 
   const setTheme = () => {
     if (window.localStorage.getItem("theme") === "default" || window.localStorage.getItem("theme") === null) {
@@ -36,7 +36,7 @@ const WrapperComponent = ({ children }) => {
   }, [setCurrentTheme, theme])
 
   return (
-    <ThemeProvider theme={theme === "default" ? defaultTheme : darkTheme}>
+    <ThemeProvider theme={theme === "dark" ? darkTheme : defaultTheme}>
       <Main ref={el => {
         wrapper = el
       }}>

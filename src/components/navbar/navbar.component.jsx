@@ -45,7 +45,7 @@ const NavBar = ({theme, toggleTheme}) => {
           </NavMenuIcon>
           <ThemeButton onClick={() => toggleTheme()} className="theme">
             {
-              theme === "default"
+              theme !== "dark"
                 ? <img src={require("../../assets/images/darkmode.e2b27f9b.svg")} alt=""/>
                 : <img src={require("../../assets/images/wb_sunny-24px.svg")} alt=""/>
             }

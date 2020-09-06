@@ -6,7 +6,7 @@ export const BlogHeaderContainer = styled.section`
   width: 80%;
   text-align: center;
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 767px) {
     width: 90%;
   }
   

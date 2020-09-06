@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import { Link } from "gatsby"
+import styled, {css} from "styled-components";
 import { bitterSweet } from "../../utils/colors"
+import {Link} from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export const StyledMenu = styled.div`
   display: flex;
@@ -34,7 +35,7 @@ export const StyledMenu = styled.div`
   }
 `;
 
-export const MenuLink = styled(Link)`
+const menuLink = css`
   margin-bottom: 5vh;
   padding: 0;
 
@@ -46,6 +47,14 @@ export const MenuLink = styled(Link)`
     margin-bottom: 7vh;
   }
 `;
+
+export const MenuLink = styled(Link)`
+  ${menuLink}
+`;
+
+export const AniMenuLink = styled(AniLink)`
+  ${menuLink}
+`
 
 export const MenuContent = styled.h4`
   color: ${({theme}) => theme.navLink};

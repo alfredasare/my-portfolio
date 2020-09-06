@@ -94,7 +94,7 @@ export const CTA = styled(Link)`
 export const LandingImgContainer = styled.div`
   width: 100%;
   border-radius: 10px;
-  margin-top: 100px;
+  //margin-top: 100px;
   
   @media screen and (max-width: 320px) {
     margin-top: 5em;

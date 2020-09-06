@@ -102,8 +102,4 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     position: fixed;
   }
-  
-  .dummy {
-    background-color: black;
-  }
 `

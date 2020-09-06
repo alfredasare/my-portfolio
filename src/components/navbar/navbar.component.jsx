@@ -13,7 +13,7 @@ import OverlayMenu from "../overlay-menu/overlay-menu.component"
 import { graphql, useStaticQuery } from "gatsby"
 
 
-const NavBar = ({theme, toggleTheme}) => {
+const NavBar = ({theme, toggleTheme, themeMode}) => {
 
   const [open, setOpen] = useState(false);
 
@@ -31,7 +31,7 @@ const NavBar = ({theme, toggleTheme}) => {
 
   return(
     <NavBarContainer>
-      <OverlayMenu open={open} setOpen={setOpen}/>
+      <OverlayMenu open={open} setOpen={setOpen} themeMode={themeMode}/>
       <NavBarRow>
         <NavBarBrand open={open} to="/">
           <BrandLogo fluid={data.logo.childImageSharp.fluid}/>

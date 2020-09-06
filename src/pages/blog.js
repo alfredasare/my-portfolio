@@ -8,6 +8,7 @@ import Footer from "../components/footer/footer.component"
 
 export default () => {
 
+
   return (
     <WrapperComponent>
       {

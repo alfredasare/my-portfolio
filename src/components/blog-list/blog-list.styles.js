@@ -13,7 +13,7 @@ export const BlogListContainer = styled.section`
   justify-items: center;
   align-items: stretch;
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 767px) {
     grid-template-columns: 1fr;
   }
   

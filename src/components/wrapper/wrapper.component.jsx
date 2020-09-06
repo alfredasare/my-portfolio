@@ -17,8 +17,6 @@ const WrapperComponent = ({ children }) => {
     gsap.to("main", {visibility: 'visible'});
   }, [theme, mountedComponent])
 
-  if(!mountedComponent) return <div className="main"/>
-
   return (
     <ThemeProvider theme={themeMode}>
       <Main className="main">
@@ -28,7 +26,7 @@ const WrapperComponent = ({ children }) => {
                 rel="stylesheet"/>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
         </Helmet>
-        <NavBar theme={theme} toggleTheme={themeToggler}/>
+        <NavBar theme={theme} themeMode={themeMode} toggleTheme={themeToggler}/>
         {children(theme)}
       </Main>
     </ThemeProvider>

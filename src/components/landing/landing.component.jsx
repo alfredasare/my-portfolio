@@ -43,7 +43,7 @@ const Landing = () => {
       ease: Power4.easeInOut,
       duration: 1
     }, .2)
-  }, [tl])
+  }, [])
 
 
   const data = useStaticQuery(graphql`

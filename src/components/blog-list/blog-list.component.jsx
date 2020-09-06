@@ -31,7 +31,6 @@ const BlogList = () => {
 
   return (
     <BlogListContainer>
-
         {
             data.allMarkdownRemark.edges.map(({node}) => (
               <BlogCard key={uuid()} excerpt={node.excerpt} slug={node.fields.slug} {...node.frontmatter}/>

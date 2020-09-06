@@ -16,7 +16,7 @@ export const BlogPostWrapper = styled.div`
     } 
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 767px) {
     width: 90%;
   }
   

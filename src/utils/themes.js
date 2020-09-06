@@ -3,7 +3,7 @@ import { bitterSweet, black, gray, oxfordBlue, grey, white } from "./colors"
 
 export const defaultTheme = {
   primaryColor: bitterSweet,
-  backgroundColor: 'white',
+  backgroundColor: `${white}`,
   navLink: 'rgba(0,0,0,0.6)',
   navLinkHover: 'rgba(0,0,0,1.0)',
   menuText: `${black}`,

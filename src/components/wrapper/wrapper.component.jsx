@@ -9,7 +9,6 @@ import { darkTheme, defaultTheme } from "../../utils/themes"
 import NavBar from "../navbar/navbar.component"
 
 const WrapperComponent = ({ children }) => {
-
   let wrapper = useRef(null)
   let initialTheme = window.localStorage.getItem("theme");
   const [theme, setCurrentTheme] = useState(initialTheme)

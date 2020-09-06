@@ -28,8 +28,6 @@ const WrapperComponent = ({ children }) => {
       window.localStorage.setItem("theme", "default")
     } else if (window.localStorage.getItem("theme") === "dark") {
       setCurrentTheme("dark")
-      window.localStorage.setItem("theme", "dark")
-      console.log(window.localStorage.getItem("theme"));
     }
     TweenLite.to(wrapper, 0, { css: { visibility: "visible" } })
   }, [setCurrentTheme, theme])

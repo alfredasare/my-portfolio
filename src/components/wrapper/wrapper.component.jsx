@@ -11,13 +11,14 @@ import NavBar from "../navbar/navbar.component"
 const WrapperComponent = ({ children }) => {
 
   let wrapper = useRef(null)
-  const [theme, setCurrentTheme] = useState(window.localStorage.getItem("theme") || "default")
+  let initialTheme = window.localStorage.getItem("theme") || "default";
+  const [theme, setCurrentTheme] = useState(initialTheme)
 
   const setTheme = () => {
-    if (window.localStorage.getItem("theme") === "default") {
+    if (window.localStorage.getItem("theme") === "default" || window.localStorage.getItem("theme") === null) {
       setCurrentTheme("dark")
       window.localStorage.setItem("theme", "dark")
-    } else {
+    } else if (window.localStorage.getItem("theme") === "dark"){
       setCurrentTheme("default")
       window.localStorage.setItem("theme", "default")
     }
@@ -31,7 +32,6 @@ const WrapperComponent = ({ children }) => {
       setCurrentTheme("dark")
       window.localStorage.setItem("theme", "dark")
     }
-    console.log(theme)
     TweenLite.to(wrapper, 0, { css: { visibility: "visible" } })
   }, [setCurrentTheme, theme])
 

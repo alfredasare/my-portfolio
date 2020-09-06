@@ -10,8 +10,8 @@ import NavBar from "../navbar/navbar.component"
 const WrapperComponent = ({ children }) => {
 
   let wrapper = useRef(null)
-
-  const [theme, setCurrentTheme] = useState( typeof window !== `undefined` ? window.localStorage.getItem("theme") || "default" : null);
+  const initialTheme = typeof window !== `undefined` ? window.localStorage.getItem("theme") || "default" : null;
+  const [theme, setCurrentTheme] = useState(initialTheme);
 
   const setTheme = () => {
     if (typeof window !== `undefined`) {

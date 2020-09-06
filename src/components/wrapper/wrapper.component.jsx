@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
+import { window } from "browser-monads"
 import { ThemeProvider } from "styled-components"
 import { TweenLite } from "gsap"
 import { GlobalStyle } from "../../utils/Global"
@@ -10,35 +11,30 @@ import NavBar from "../navbar/navbar.component"
 const WrapperComponent = ({ children }) => {
 
   let wrapper = useRef(null)
-  const initialTheme = typeof window !== `undefined` ? window.localStorage.getItem("theme") || "default" : null;
-  const [theme, setCurrentTheme] = useState(initialTheme);
+  const [theme, setCurrentTheme] = useState(window.localStorage.getItem("theme") || "default")
 
   const setTheme = () => {
-    if (typeof window !== `undefined`) {
-      if (window.localStorage.getItem("theme") === "default") {
-        setCurrentTheme("dark")
-        window.localStorage.setItem("theme", "dark")
-      } else {
-        setCurrentTheme("default")
-        window.localStorage.setItem("theme", "default")
-      }
+    if (window.localStorage.getItem("theme") === "default") {
+      setCurrentTheme("dark")
+      window.localStorage.setItem("theme", "dark")
+    } else {
+      setCurrentTheme("default")
+      window.localStorage.setItem("theme", "default")
     }
   }
 
   useEffect(() => {
-    if (typeof window !== `undefined`) {
-      if (window.localStorage.getItem("theme") === "default") {
-        setCurrentTheme("default");
-        window.localStorage.setItem("theme", "default")
-      } else if (window.localStorage.getItem("theme") === "dark"){
-        setCurrentTheme("dark");
-        window.localStorage.setItem("theme", "dark")
-      } else if (window.localStorage.getItem("theme") === null) {
-        setCurrentTheme("default");
-        window.localStorage.setItem("theme", "default");
-      }
+    if (window.localStorage.getItem("theme") === "default") {
+      setCurrentTheme("default")
+      window.localStorage.setItem("theme", "default")
+    } else if (window.localStorage.getItem("theme") === "dark") {
+      setCurrentTheme("dark")
+      window.localStorage.setItem("theme", "dark")
+    } else if (window.localStorage.getItem("theme") === null) {
+      setCurrentTheme("default")
+      window.localStorage.setItem("theme", "default")
     }
-    console.log(theme);
+    console.log(theme)
     TweenLite.to(wrapper, 0, { css: { visibility: "visible" } })
   }, [setCurrentTheme, theme])
 

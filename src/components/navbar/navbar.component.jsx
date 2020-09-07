@@ -37,9 +37,6 @@ const NavBar = ({theme, toggleTheme, themeMode}) => {
           <BrandLogo fluid={data.logo.childImageSharp.fluid}/>
         </NavBarBrand>
         <NavMenuContainer>
-          {/*<NavMenuText onClick={() => setOpen(!open)}>*/}
-          {/*  {open ? 'Close': 'Menu'}*/}
-          {/*</NavMenuText>*/}
           <NavMenuIcon>
             <Burger open={open} setOpen={setOpen}/>
           </NavMenuIcon>

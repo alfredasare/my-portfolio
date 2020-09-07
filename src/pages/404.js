@@ -6,7 +6,7 @@ import WrapperComponent from "../components/wrapper/wrapper.component"
 const NotFoundPage = () => (
   <WrapperComponent>
     {
-      (useDarkTheme, setDarkTheme) => (
+      () => (
         <>
           <SEO title="404: Not found" />
           <NotFound />

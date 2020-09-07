@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import ProjectList from "./project-list.component"
 import uuid from 'react-uuid'
+import { ProjectListWrapper } from "./project-list.styles"
 
 const ProjectListContainer = ({theme}) => {
 
@@ -140,7 +141,9 @@ const ProjectListContainer = ({theme}) => {
   ];
 
   return (
-    <ProjectList projectData={projectData}/>
+    <ProjectListWrapper>
+      <ProjectList projectData={projectData}/>
+    </ProjectListWrapper>
   )
 }
 

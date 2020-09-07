@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 import WrapperComponent from "../components/wrapper/wrapper.component"
 import SEO from "../components/seo"
-import Cursor from "../components/cursor/cursor.component"
 import {
   BackLink,
   BlogContent,
@@ -14,6 +13,7 @@ import {
   PreviousPost
 } from "./blog-post.styles"
 import Footer from "../components/footer/footer.component"
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -24,9 +24,8 @@ const BlogPost = ({ data, pageContext }) => {
     <WrapperComponent>
       {
         () => (
-          <>
+          <PageTransition>
             <SEO title={post.frontmatter.title} description={post.excerpt}/>
-            <Cursor/>
             <BlogPostWrapper>
               <BackLink to="/blog">&#8592; Back to Posts</BackLink>
               <BlogPostHead>{post.frontmatter.title}</BlogPostHead>
@@ -40,7 +39,7 @@ const BlogPost = ({ data, pageContext }) => {
               </PostNavWrapper>
             </BlogPostWrapper>
             <Footer/>
-          </>
+          </PageTransition>
         )
       }
     </WrapperComponent>

@@ -11,8 +11,12 @@ export const BlogCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
-    @media screen and (max-width: 600px) {
+    
+    @media screen and (max-width: 360px) {
+      height: unset;
+    }
+    
+    @media screen and (min-width: 361px) and (max-width: 767px) {
       height: 325px;
       min-height: 300px;
     }

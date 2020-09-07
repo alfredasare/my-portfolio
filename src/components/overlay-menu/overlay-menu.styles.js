@@ -1,7 +1,6 @@
 import styled, {css} from "styled-components";
 import { bitterSweet } from "../../utils/colors"
 import {Link} from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export const StyledMenu = styled.div`
   display: flex;
@@ -52,9 +51,6 @@ export const MenuLink = styled(Link)`
   ${menuLink}
 `;
 
-export const AniMenuLink = styled(AniLink)`
-  ${menuLink}
-`
 
 export const MenuContent = styled.h4`
   color: ${({theme}) => theme.navLink};

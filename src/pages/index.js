@@ -3,20 +3,17 @@ import SEO from "../components/seo"
 import WrapperComponent from "../components/wrapper/wrapper.component"
 import Landing from "../components/landing/landing.component"
 import Footer from "../components/footer/footer.component"
-import { NavBarScroll } from "../utils/navbar-scroll"
 import AboutSection from "../components/about-section/about-section.component"
-import Cursor from "../components/cursor/cursor.component"
 import ProjectListContainer from "../components/project-list/project-list.container"
 import Tech from "../components/tech/tech.component"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-
+import PageTransition from 'gatsby-plugin-page-transitions';
+import BlogSection from "../components/blog-section/blog-section.component"
 
 export default () => {
 
   useEffect(() => {
-    NavBarScroll();
-
     if (typeof window !== `undefined`) {
       gsap.registerPlugin(ScrollTrigger)
       gsap.core.globals("ScrollTrigger", ScrollTrigger)
@@ -27,15 +24,15 @@ export default () => {
     <WrapperComponent>
       {
         (theme) => (
-          <>
+          <PageTransition>
             <SEO title="Alfred Asare"/>
-            <Cursor/>
             <Landing/>
             <AboutSection/>
             <Tech/>
             <ProjectListContainer theme={theme}/>
+            <BlogSection />
             <Footer/>
-          </>
+          </PageTransition>
         )
       }
     </WrapperComponent>

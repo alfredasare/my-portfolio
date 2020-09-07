@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-export const ProjectListContainer = styled.section`
+export const ProjectListWrapper = styled.section`
+    border-bottom: 1px solid ${({theme}) => theme.borderColor};
+`;
+
+export const ProjectListContainer = styled.div`
   height: 100%;
   width: 80%;
   margin: 80px auto 80px auto;
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 767px) {
     width: 95%;
   }
   

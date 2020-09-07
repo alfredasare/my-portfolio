@@ -7,6 +7,8 @@ import { Helmet } from "react-helmet"
 import { Main } from "./wrapper.styles"
 import { darkTheme, defaultTheme } from "../../utils/themes"
 import NavBar from "../navbar/navbar.component"
+import { NavBarScroll } from "../../utils/navbar-scroll"
+import Cursor from "../cursor/cursor.component"
 
 const WrapperComponent = ({ children }) => {
 
@@ -14,13 +16,17 @@ const WrapperComponent = ({ children }) => {
   const themeMode = theme === 'default' ? defaultTheme : darkTheme;
 
   useEffect(() => {
+    NavBarScroll();
     gsap.to("main", {visibility: 'visible'});
-  }, [theme, mountedComponent])
+  }, [mountedComponent])
+
+
 
   return (
     <ThemeProvider theme={themeMode}>
       <Main className="main">
         <GlobalStyle/>
+        <Cursor />
         <Helmet>
           <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap"
                 rel="stylesheet"/>

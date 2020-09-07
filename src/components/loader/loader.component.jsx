@@ -1,28 +1,10 @@
 import React from "react"
-import { ImageWrapper, LoaderWrapper } from "./loader.styles"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image";
 
-const Loader = () => {
-
-  const data = useStaticQuery(graphql`
-      query {
-          logo: file(relativePath: { eq: "brand.png"}) {
-              childImageSharp {
-                  fluid(maxWidth: 600) {
-                      ...GatsbyImageSharpFluid
-                  }
-              }
-          }
-      }
-  `);
-
+const Loader = ({themeMode}) => {
   return (
-    <LoaderWrapper>
-      <ImageWrapper>
-        <Img fluid={data.logo.childImageSharp.fluid} />
-      </ImageWrapper>
-    </LoaderWrapper>
+    <div style={{height: '100vh', width: '100vw', backgroundColor: `${themeMode.backgroundColor}`}}>
+      <h1>asdadddddddddddd</h1>
+    </div>
   )
 }
 

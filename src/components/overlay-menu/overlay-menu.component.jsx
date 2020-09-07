@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import {
-  AniMenuLink,
   MenuContent,
   MenuLink,
   OverlayMenuSocial,
@@ -18,15 +17,15 @@ const OverlayMenu = ({open, setOpen, themeMode}) => {
     } else {
       document.querySelector("html").classList.remove("hide-overflow");
     }
-  }, []);
+  }, [open]);
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden}>
-      <AniMenuLink cover duration={1} bg={`${themeMode.backgroundColor}`} to="/#">
+      <MenuLink to="/#">
         <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
           Home
         </MenuContent>
-      </AniMenuLink>
+      </MenuLink>
       <MenuLink to="/#about">
         <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
           About me
@@ -42,11 +41,11 @@ const OverlayMenu = ({open, setOpen, themeMode}) => {
           Contact
         </MenuContent>
       </MenuLink>
-      <AniMenuLink cover duration={1} bg={`${themeMode.backgroundColor}`} to="/blog">
+      <MenuLink to="/blog">
         <MenuContent open={open} aria-hidden={!isHidden} onClick={() => setOpen(!open)}>
           Blog
         </MenuContent>
-      </AniMenuLink>
+      </MenuLink>
       <OverlayMenuSocial>
         <OverlayMenuSocialLink href="https://web.facebook.com/alfred.asareamoah" target="_blank" rel="noreferrer">
           <i className="fab fa-facebook-f" aria-hidden="true"/>

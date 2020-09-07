@@ -30,10 +30,6 @@ export const GlobalStyle = createGlobalStyle`
       border-radius: 0.25rem;
     }
     
-    .active {
-        
-    }
-    
     .hide-overflow {
       overflow-y: hidden;
     }

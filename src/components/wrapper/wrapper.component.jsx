@@ -6,7 +6,6 @@ import { GlobalStyle } from "../../utils/Global"
 import { Helmet } from "react-helmet"
 import { Main } from "./wrapper.styles"
 import { darkTheme, defaultTheme } from "../../utils/themes"
-import NavBar from "../navbar/navbar.component"
 import { NavBarScroll } from "../../utils/navbar-scroll"
 import Cursor from "../cursor/cursor.component"
 
@@ -21,7 +20,6 @@ const WrapperComponent = ({ children }) => {
   }, [mountedComponent])
 
 
-
   return (
     <ThemeProvider theme={themeMode}>
       <Main className="main">
@@ -32,8 +30,7 @@ const WrapperComponent = ({ children }) => {
                 rel="stylesheet"/>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
         </Helmet>
-        <NavBar theme={theme} themeMode={themeMode} toggleTheme={themeToggler}/>
-        {children(theme)}
+        {children(theme, themeMode, themeToggler)}
       </Main>
     </ThemeProvider>
   )

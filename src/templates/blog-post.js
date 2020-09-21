@@ -14,6 +14,7 @@ import {
 } from "./blog-post.styles"
 import Footer from "../components/footer/footer.component"
 import PageTransition from 'gatsby-plugin-page-transitions';
+import NavBar from "../components/navbar/navbar.component"
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -23,9 +24,10 @@ const BlogPost = ({ data, pageContext }) => {
   return (
     <WrapperComponent>
       {
-        () => (
+        (theme, themeMode, themeToggler) => (
           <PageTransition>
             <SEO title={post.frontmatter.title} description={post.excerpt}/>
+            <NavBar theme={theme} themeMode={themeMode} toggleTheme={themeToggler}/>
             <BlogPostWrapper>
               <BackLink to="/blog">&#8592; Back to Posts</BackLink>
               <BlogPostHead>{post.frontmatter.title}</BlogPostHead>

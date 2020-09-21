@@ -10,6 +10,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import PageTransition from 'gatsby-plugin-page-transitions';
 import BlogSection from "../components/blog-section/blog-section.component"
+import NavBar from "../components/navbar/navbar.component"
 
 export default () => {
 
@@ -23,9 +24,10 @@ export default () => {
   return (
     <WrapperComponent>
       {
-        (theme) => (
+        (theme, themeMode, themeToggler) => (
           <PageTransition>
             <SEO title="Alfred Asare"/>
+            <NavBar theme={theme} themeMode={themeMode} toggleTheme={themeToggler}/>
             <Landing/>
             <AboutSection/>
             <Tech/>

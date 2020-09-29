@@ -19,7 +19,6 @@ const WrapperComponent = ({ children }) => {
     gsap.to("main", {visibility: 'visible'});
   }, [mountedComponent])
 
-
   return (
     <ThemeProvider theme={themeMode}>
       <Main className="main">
@@ -30,7 +29,7 @@ const WrapperComponent = ({ children }) => {
                 rel="stylesheet"/>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
         </Helmet>
-        {children(theme, themeMode, themeToggler)}
+          {children(theme, themeMode, themeToggler)}
       </Main>
     </ThemeProvider>
   )

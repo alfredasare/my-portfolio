@@ -15,7 +15,8 @@ export const defaultTheme = {
   blogExcerpt: '#00000099',
   blogLink: '#00000099',
   blogLinkHover: '#000000',
-  blogSubHead: `${gray}`
+  blogSubHead: `${gray}`,
+  tagColor: `${black}`
 }
 
 export const darkTheme = {
@@ -32,5 +33,6 @@ export const darkTheme = {
   blogExcerpt: '#ffffff',
   blogLink: 'rgba(255,255,255,0.8)',
   blogLinkHover: 'rgba(255,255,255,1.0)',
-  blogSubHead: `rgba(255,255,255,0.8)`
+  blogSubHead: `rgba(255,255,255,0.8)`,
+  tagColor: `${white}`
 }

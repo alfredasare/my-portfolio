@@ -1,7 +1,7 @@
 ---
 title: "Quadratic Runtime"
 date: "2020-08-06"
-tags: ['Data Structures & Algorithms']
+tags: ['Algorithms']
 ---
 
 

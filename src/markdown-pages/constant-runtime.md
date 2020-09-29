@@ -1,7 +1,7 @@
 ---
 title: "Constant Runtime"
 date: "2020-08-04"
-tags: ['Data Structures & Algorithms']
+tags: ['Algorithms']
 ---
 
 

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 import WrapperComponent from "../components/wrapper/wrapper.component"
@@ -15,11 +15,14 @@ import {
 import Footer from "../components/footer/footer.component"
 import PageTransition from 'gatsby-plugin-page-transitions';
 import NavBar from "../components/navbar/navbar.component"
+import TagContext from "../context/tagContext"
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const { next, prev } = pageContext
   deckDeckGoHighlightElement()
+
+  const {tag} = useContext(TagContext);
 
   return (
     <WrapperComponent>
@@ -34,10 +37,17 @@ const BlogPost = ({ data, pageContext }) => {
               <BlogPostDate>{post.frontmatter.date}</BlogPostDate>
               <BlogContent dangerouslySetInnerHTML={{ __html: post.html }}/>
               <PostNavWrapper>
-                {prev && (
-                  <PreviousPost to={prev.fields.slug}>&#8592; Previous <br/> {prev.frontmatter.title}</PreviousPost>)}
+                {
+                  prev && (post.frontmatter.tags.includes(prev.frontmatter.tags[0]) || tag === 'All')
+                    ? (<PreviousPost to={prev.fields.slug}>&#8592; Previous <br/> {prev.frontmatter.title}</PreviousPost>)
+                    : <></>
+                }
                 <br/>
-                {next && (<NextPost to={next.fields.slug}>Next &#8594;<br/> {next.frontmatter.title}</NextPost>)}
+                {
+                  next && (post.frontmatter.tags.includes(next.frontmatter.tags[0])  || tag === 'All')
+                    ? (<NextPost to={next.fields.slug}>Next &#8594;<br/> {next.frontmatter.title}</NextPost>)
+                    : <></>
+                }
               </PostNavWrapper>
             </BlogPostWrapper>
             <Footer/>
@@ -55,6 +65,7 @@ export const query = graphql`
             frontmatter {
                 title
                 date
+                tags
             }
         }
     }

@@ -1,7 +1,7 @@
 ---
 title: "Linear Runtime O(n)"
 date: "2020-08-05"
-tags: ['Data Structures & Algorithms']
+tags: ['Algorithms']
 ---
 
 

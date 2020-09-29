@@ -11,6 +11,7 @@ export const BlogCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  text-align: left;
     
     @media screen and (max-width: 360px) {
       height: unset;

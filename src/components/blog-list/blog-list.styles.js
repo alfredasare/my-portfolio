@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import {motion} from "framer-motion";
 
-export const BlogListContainer = styled.section`
+export const BlogListContainer = styled(motion.section)`
   height: auto;
   width: 80%;
   border-top: 2px solid rgba(0,0,0,0.02);

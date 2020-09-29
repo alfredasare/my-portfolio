@@ -44,7 +44,7 @@ export const CursorScript = () => {
       updateProperties(cursor, state)
     })
 
-    document.querySelectorAll('a, button, .theme').forEach(elem => {
+    document.querySelectorAll('a, button, .theme, .tag').forEach(elem => {
       elem.addEventListener('mouseenter', () => (onElement = elem))
       elem.addEventListener('mouseleave', () => (onElement = undefined))
     })

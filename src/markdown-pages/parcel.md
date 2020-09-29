@@ -1,7 +1,7 @@
 ---
-title: 'Big O Asymptotic Analysis'
-date: '2020-08-03'
-tags: ['Algorithms']
+title: 'Setting Up React With Parcel'
+date: '2020-09-03'
+tags: ['React']
 ---
 
 #Big O Notation
@@ -36,32 +36,55 @@ notation is used to describe the performance and complexity of an algorithm. It 
 needed to successfully execute an algorithm. Being able to determine this enables one to know the usefulness of a particular
 algorithm or code.
 
-The amount of time required to run an algorithm is called its **time complexity**. The amount of space needed by that algorithm
-to run is called its **space complexity**.
-
-Below are some of the most common time and space complexities:
-* Constant Runtime (**O(1)**)
-* Linear Runtime (**O(n)**)
-* Logarithmic Runtime (**O(logn)**)
-* Linear Runtime (**O(n)**)
-* Quadratic Runtime (**O(n<sup>2</sup>)**)
-* Exponential Runtime (**O(2<sup>n</sup>)**)
-* Factorial Runtime (**O(n!)**)
-* Super-linear Runtime- (**O(nlogn)**)
-
-The following chart shows how each runtime varies as the number of elements increase
-
-![Big O Cheat Sheet](https://miro.medium.com/max/2928/1*5ZLci3SuR0zM_QlZOADv8Q.jpeg)
 
 We will discuss the most common runtimes one after another as time goes by so that you at least get a fair idea of each of
 them. I will also try to keep each post as short as possible.Till then, Happy coding! :punch:
 
+```jsx
+import React, { useEffect, useState } from "react"
+import {useStaticQuery, graphql} from "gatsby"
+import { BlogListContainer } from "./blog-list.styles"
+import BlogCard from "../blog-card/blog-card.component"
+import uuid from "react-uuid";
+
+
+const BlogList = () => {
+
+  const [tag, setTag] = useState('Data Structures & Algorithms');
+
+  useEffect(() => {
+
+  }, [tag]);
+
+  const changeTag = () => {
+    setTag("React");
+  }
+
+  return (
+    <BlogListContainer layout>
+        <button onClick={changeTag}>Change</button>
+        {
+            data.allMarkdownRemark.edges
+              .filter(({node}) => {
+                if (tag === 'All') {
+                  return node;
+                } else {
+                  return node.frontmatter.tags.includes(tag)
+                }
+              })
+              .map(({node}) => (
+              <BlogCard key={uuid()} excerpt={node.excerpt} slug={node.fields.slug} {...node.frontmatter}/>
+            ))
+        }
+    </BlogListContainer>
+  )
+}
+
+export default BlogList
+
+ ``` 
+
 <br />
-
-## References
-1. <a href="https://www.bigocheatsheet.com/" target="_blank">Big O Cheat Sheet</a>
-2. <a href="https://www.theavocoder.com/big-o-notation/2018/12/22/big-o-notation" target="_blank">Theavocoder - Big O Notation</a>
-
 
 
 

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext } from "react"
 import {useStaticQuery, graphql} from "gatsby"
 import { BlogListContainer } from "./blog-list.styles"
 import BlogCard from "../blog-card/blog-card.component"

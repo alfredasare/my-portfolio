@@ -63,7 +63,7 @@ export const SpanWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  border-top: 1px solid rgba(0,0,0,0.09);
+  border-top: ${({theme}) => `1px solid ${theme.blogItemBorder}`};
   padding-top: 10px;
 
 `;

@@ -75,5 +75,5 @@ Below is a graph that shows how a constant time algorithm varies with time
 The next topic we'll look at is the Linear runtime or O(n). Until then, Happy Coding! :punch:
 
 ## References
-1. <a href="https://gumroad.com/l/aUVXY" target="_blank">Decoding the Coding Interview Process by Emma Bostian</a>
-2. <a href="https://www.theavocoder.com/big-o-notation/2018/12/22/constant-o1" target="_blank">Theavocoder - Constant O(1)</a>
+1. <a href="https://gumroad.com/l/aUVXY" target="_blank" rel="noopener noreferrer">Decoding the Coding Interview Process by Emma Bostian</a>
+2. <a href="https://www.theavocoder.com/big-o-notation/2018/12/22/constant-o1" target="_blank" rel="noopener noreferrer">Theavocoder - Constant O(1)</a>

@@ -9,6 +9,7 @@ export const BlogPostWrapper = styled.div`
   li {
     a {
       color: ${({theme}) => theme.blogLink};
+      text-decoration: none;
       
       &:hover {
         color: ${({theme}) => theme.blogLinkHover};

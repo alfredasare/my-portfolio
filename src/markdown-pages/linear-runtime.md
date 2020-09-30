@@ -45,5 +45,5 @@ Later we'll have a look at the Quadratic or Polynomial runtime. Until then, Happ
 <br />
 
 ## References
-1. <a href="https://gumroad.com/l/aUVXY" target="_blank">Decoding the Coding Interview Process by Emma Bostian</a>
-2. <a href="https://www.theavocoder.com/big-o-notation/2018/12/22/constant-o1" target="_blank">Theavocoder - Linear O(n)</a>
+1. <a href="https://gumroad.com/l/aUVXY" target="_blank" rel="noopener noreferrer">Decoding the Coding Interview Process by Emma Bostian</a>
+2. <a href="https://www.theavocoder.com/big-o-notation/2018/12/22/constant-o1" target="_blank" rel="noopener noreferrer">Theavocoder - Linear O(n)</a>

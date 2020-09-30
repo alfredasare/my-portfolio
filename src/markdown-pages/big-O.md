@@ -58,8 +58,8 @@ them. I will also try to keep each post as short as possible.Till then, Happy co
 <br />
 
 ## References
-1. <a href="https://www.bigocheatsheet.com/" target="_blank">Big O Cheat Sheet</a>
-2. <a href="https://www.theavocoder.com/big-o-notation/2018/12/22/big-o-notation" target="_blank">Theavocoder - Big O Notation</a>
+1. <a href="https://www.bigocheatsheet.com/" target="_blank" rel="noopener noreferrer">Big O Cheat Sheet</a>
+2. <a href="https://www.theavocoder.com/big-o-notation/2018/12/22/big-o-notation" target="_blank" rel="noopener noreferrer">Theavocoder - Big O Notation</a>
 
 
 

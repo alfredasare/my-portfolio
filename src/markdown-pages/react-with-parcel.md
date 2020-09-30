@@ -5,15 +5,15 @@ tags: ['React']
 ---
 
 
-This is a brief post on how to get started with react using the Parcel bundler. <a href="https://parceljs.org/" target="_blank">**Parcel**</a> is a zero-configuration web application bundler for JavaScript applications.
-Before Parcel, <a href="https://webpack.js.org/" target="_blank">Webpack</a> was used for bundling JS applications. With Webpack you have to do some configurations yourself and this can be kinda frustrating especially if you are  a newbie. However since version 4 of <a href="https://webpack.js.org/concepts/" target="_blank">Webpack</a>, it does not require you to have a configuration file to bundle your project and hence they have also decided to go with a zero-configuration approach. 
-Another way to setup a React application is by using <a href="https://create-react-app.dev/docs/getting-started/" target="_blank">create-react-app</a>. This is quicker to setup in comparison to Parcel and Webpack. Some developers, however, don't like create-react-app because it comes with a ton of default configuration that they may not like or even need for that matter. Developers like that either opt for Webpack or Parcel.
+Hello everyone :wave:. In this post, I am going to show you how to get started with React using the Parcel bundler. <a href="https://parceljs.org/" target="_blank" rel="noopener noreferrer">**Parcel**</a> is a zero-configuration web application bundler for JavaScript applications.
+Before Parcel, <a href="https://webpack.js.org/" target="_blank" rel="noopener noreferrer">Webpack</a> was used for bundling JS applications. With Webpack you have to do some configurations yourself and this can be kinda frustrating especially if you are  a newbie. However, since version 4 of <a href="https://webpack.js.org/concepts/" target="_blank" rel="noopener noreferrer">Webpack</a>, it does not require you to have a configuration file to bundle your project and hence they have also decided to go with a zero-configuration approach. 
+Another way to set up a React application is by using <a href="https://create-react-app.dev/docs/getting-started/" target="_blank" rel="noopener noreferrer">create-react-app</a>. This is quicker to setup in comparison to Parcel and Webpack. Some developers, however, don't like create-react-app because it comes with a ton of default configuration that they may not like or even need for that matter. Developers like that either opt for Webpack or Parcel.
 But this post is about Parcel so let's jump right into it.
 
 <br />
 
 ## INITIAL SETUP
-Before we get started, make sure you have <a href="https://nodejs.org/en/" target="_blank">node</a> installed. After this, create an empty folder using the command line or you could just create a folder using your OS's GUI tools (eg. on Windows, right-click, go to New, select Folder). Any approach is fine.
+Before we get started, make sure you have <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer">node</a> installed. After this, create an empty folder using the command line or you could just create a folder using your OS's GUI tools (eg. on Windows, right-click, go to New, select Folder). Any approach is fine.
 If you decide to use the command line, you can use this command.
 
 ```bash
@@ -110,7 +110,7 @@ Now in the root folder (react-with-parcel), create two folders: public and src. 
 
 **public/index.html**
 
-```html
+```jsx
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -211,7 +211,7 @@ Add a div with an id of root in your index.html file
 <br />
 
 **public/index.html**
-```html
+```jsx
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -247,7 +247,7 @@ ReactDOM.render(
 ```
 <br />
 
-This is a very very minimal React application :joy: . The ReactDOM.render basically takes the h1 and renders it in our div placeholder in the index.html file. Take note that this h1 is not actually HTML but <a href="https://reactjs.org/docs/introducing-jsx.html" target="_blank">JSX</a>. You can read more about it later. Now run npm start and navigate to **http://localhost:1234** . You should see our h1 rendered. Et voila (emoji), that's a basic React setup with Parcel.
+This is a very very minimal React application :joy: . The ReactDOM.render basically takes the h1 and renders it in our div placeholder in the index.html file. Take note that this h1 is not actually HTML but <a href="https://reactjs.org/docs/introducing-jsx.html" target="_blank" rel="noopener noreferrer">JSX</a>. You can read more about it later. Now run npm start and navigate to **http://localhost:1234** . You should see our h1 rendered. Et voila (emoji), that's a basic React setup with Parcel.
 
 However, let's try to set up a folder structure like we would in a real application
 
@@ -260,7 +260,7 @@ In the src folder create the following folders and files:
 - **App.jsx** : This is the main component that houses other components. this will basically be imported into the index.js files and rendered to our placeholder div in our index.html file
 - **App.css** : Contains styles of the App.jsx files. 
     
-I'm going to put in some random content into some of these files, but I won't go too much into detail since this is not a React tutorial. You can however learn  more about <a href="https://reactjs.org/" target="_blank">React</a> on their official website.
+I'm going to put in some random content into some of these files, but I won't go too much into detail since this is not a React tutorial. You can however learn  more about <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> on their official website.
 
 <br />
 
@@ -342,4 +342,4 @@ ReactDOM.render(
 
 All we basically did was create a home components and styled it using the home.styles.css. We then imported this into the App.jsx file. In the App.jsx file, we also import our App.css to make use of our App styles. Finally, we import the App component into the index.js to render our App component to the screen.
 
-That's basically it. We have successfully set up React using Parcel. You can find the code in this Github repo. Until the next post, happy coding! :punch:
+That's basically it. We have successfully set up React using Parcel. You can find the code in <a href="https://github.com/alfredasare/react-with-parcel.git" target="_blank" rel="noopener noreferrer">this Github repo</a>. Until the next post, happy coding! :punch:

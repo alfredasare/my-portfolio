@@ -4,7 +4,6 @@ date: '2020-08-03'
 tags: ['Algorithms']
 ---
 
-#Big O Notation
 
 If you have ever applied for a job at a Tech company or if you offered Computer Science in the university, 
 there is a probability you have come across the term **Big O**. The term is **Big O Asymptotic Analysis** but is more 

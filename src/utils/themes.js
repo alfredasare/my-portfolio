@@ -17,7 +17,9 @@ export const defaultTheme = {
   blogLinkHover: '#000000',
   blogSubHead: `${gray}`,
   tagColor: `${black}`,
-  blogItemBorder: 'rgba(0,0,0,0.09)'
+  blogItemBorder: 'rgba(0,0,0,0.09)',
+  inlineBlogLink : 'rgba(0,0,0,1.0)',
+  inlineBlogLinkHover: 'rgba(0,0,0,1.0)'
 }
 
 export const darkTheme = {
@@ -36,5 +38,7 @@ export const darkTheme = {
   blogLinkHover: 'rgba(255,255,255,1.0)',
   blogSubHead: `rgba(255,255,255,0.8)`,
   tagColor: `${white}`,
-  blogItemBorder: 'rgba(255,255,255,0.6)'
+  blogItemBorder: 'rgba(255,255,255,0.6)',
+  inlineBlogLink : 'rgba(255,255,255,1.0)',
+  inlineBlogLinkHover: 'rgba(255,255,255,1.0)'
 }

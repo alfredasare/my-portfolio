@@ -5,8 +5,6 @@ tags: ['Algorithms']
 ---
 
 
-# Quadratic Runtime or O(n<sup>2</sup>)
-
 It basically describes an algorithm whose performance or runtime is proportional to the square of the size of the input
 or data. this is mostly found in algorithms that make use of nested loops.
 

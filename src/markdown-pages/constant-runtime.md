@@ -5,10 +5,8 @@ tags: ['Algorithms']
 ---
 
 
-#Constant Runtime or O(1)
 
-
-Constant runtime / time complexity is the term used to refer to an algorithm which will always execute in the same
+Constant runtime O(1) / time complexity is the term used to refer to an algorithm which will always execute in the same
 amount of time regardless of the amount of data or input fed into it.
 
 Here are a few examples

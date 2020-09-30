@@ -5,8 +5,7 @@ tags: ['Algorithms']
 ---
 
 
-# Linear runtime or O(n)
-Linear runtime / time complexity is a term applied to algorithms whose performance and time complexity grow linearly and
+Linear runtime O(n) / time complexity is a term applied to algorithms whose performance and time complexity grow linearly and
 proportionally with the size of the input or data.
 
 A typical example of a linear runtime operation is an array.

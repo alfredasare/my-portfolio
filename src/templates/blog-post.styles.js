@@ -69,14 +69,14 @@ export const BlogContent = styled.section`
   img {
     width: 100%;
   }
-  
   a {
-    color: rgba(0,0,0,0.7);
+    color: ${({theme}) => theme.inlineBlogLink};
     font-weight: bold;
     transition: 0.2s color ease-in-out;
+    text-decoration: underline;
     
     &:hover {
-      color: rgba(0,0,0,1.0);
+      color: ${({theme}) => theme.inlineBlogLinkHover};
     }
   }
 `;

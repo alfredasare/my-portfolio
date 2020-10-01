@@ -127,6 +127,7 @@ export const ErrorFooter = styled.footer`
   
   @media screen and (max-width: 600px) {
     flex-direction: column;
+    height: auto;
   }
 `;
 

@@ -24,11 +24,6 @@ const BlogPost = ({ data, pageContext }) => {
 
   const {tag} = useContext(TagContext);
 
-  useEffect(() => {
-    console.log(next);
-    console.log(prev);
-  })
-
   return (
     <WrapperComponent>
       {

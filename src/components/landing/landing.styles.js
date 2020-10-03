@@ -25,6 +25,15 @@ export const LandingWrapper = styled.header`
   @media screen and (min-width: 601px) and (max-width: 1024px) {
     height: 60vh;
   }
+  
+  @media screen and (width: 1024px) and (height: 1366px) {
+    padding-bottom: 50px;
+  }
+  
+  @media screen and (min-height: 1025px) and (max-width: 1500px) {
+    margin-top: 100px;
+    height: 100%;
+  }
 `;
 
 export const LandingGrid = styled.div`
@@ -94,7 +103,7 @@ export const CTA = styled(Link)`
 export const LandingImgContainer = styled.div`
   width: 100%;
   border-radius: 10px;
-  //margin-top: 100px;
+  margin-top: 40px;
   
   @media screen and (max-width: 320px) {
     margin-top: 5em;
@@ -120,5 +129,9 @@ export const LandingImg = styled(Img)`
   
   @media screen and (max-width: 768px) {
     max-width: 400px;
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1440px) {
+    max-width: 390px;
   }
 `;

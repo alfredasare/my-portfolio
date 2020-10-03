@@ -8,7 +8,7 @@ export const NavBarContainer = styled.nav`
   top: 0;
   right: 0;
   left: 0;
-  padding: 50px;
+  padding: 25px;
   color: black;
   z-index: 50;
   background-color: ${({theme}) => theme.backgroundColor};

@@ -6,7 +6,7 @@ export const NavBarScroll = () => {
 
     if (navbar !== undefined && navbar){
       if (currentScrollPosition === 0) {
-        navbar.style.padding = "50px 0";
+        navbar.style.padding = "25px 0";
       }
 
       if (previousScrollPosition > currentScrollPosition || currentScrollPosition < "200") {

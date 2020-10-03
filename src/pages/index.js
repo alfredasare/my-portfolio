@@ -26,7 +26,7 @@ export default () => {
       {
         (theme, themeMode, themeToggler) => (
           <PageTransition>
-            <SEO title="Alfred Asare"/>
+            <SEO title="Frontend Web Developer"/>
             <NavBar theme={theme} themeMode={themeMode} toggleTheme={themeToggler}/>
             <Landing/>
             <AboutSection/>

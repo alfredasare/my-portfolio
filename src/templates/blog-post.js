@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { graphql } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 import WrapperComponent from "../components/wrapper/wrapper.component"
@@ -23,6 +23,11 @@ const BlogPost = ({ data, pageContext }) => {
   deckDeckGoHighlightElement()
 
   const {tag} = useContext(TagContext);
+
+  useEffect(() => {
+    console.log(next);
+    console.log(prev);
+  })
 
   return (
     <WrapperComponent>

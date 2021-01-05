@@ -42,7 +42,9 @@ const Landing = () => {
       y: 60,
       ease: Power4.easeInOut,
       duration: 1
-    }, .2)
+    }, .2);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 

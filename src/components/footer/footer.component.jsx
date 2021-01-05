@@ -123,7 +123,7 @@ const Footer = () => {
 
       <CopyRightRow className="footer-copyright-row">
         <CopyRight>
-          <CopyRightText>&copy; 2020 Alfred Asare </CopyRightText>
+          <CopyRightText>&copy; {new Date().getFullYear()} Alfred Asare </CopyRightText>
         </CopyRight>
         <FooterLogo to="/">
           <FooterBrand fluid={data.footerLogo.childImageSharp.fluid}/>

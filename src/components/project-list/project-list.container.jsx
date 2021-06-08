@@ -31,6 +31,22 @@ const ProjectListContainer = ({theme}) => {
                   }
               }
           }
+          
+          evodia: file(relativePath: { eq: "evodia.png"}) {
+              childImageSharp {
+                  fluid(maxWidth: 2000) {
+                      ...GatsbyImageSharpFluid
+                  }
+              }
+          }
+
+          wavepod: file(relativePath: { eq: "wavepod.png"}) {
+              childImageSharp {
+                  fluid(maxWidth: 2000) {
+                      ...GatsbyImageSharpFluid
+                  }
+              }
+          }
 
           fr: file(relativePath: { eq: "fr_logistics.png"}) {
               childImageSharp {
@@ -87,43 +103,30 @@ const ProjectListContainer = ({theme}) => {
     },
     {
       id: uuid(),
-      projectName: "Design Studios",
-      projectCategory: "Portfolio",
-      projectInfo: `This website was developed for a design company which specializes in graphic design and
-                    animations. However they are yet to provide their works and site content and hence the use of dummy data. 
-                    It was also developed using React.`,
-      projectUrl: "https://drvmroll-design-portfolio.netlify.app/",
-      bgColor: "#F2542D",
+      projectName: "Wavepod",
+      projectCategory: "Podcast",
+      projectInfo: `A podcast app inspired by Google Podcasts. The frontend was built with NextJS, styled-components and redux. 
+                    Node, Express, MongoDB, Jest and Supertest were used to build the backend.`,
+      projectUrl: "https://wavepod.vercel.app",
+      bgColor: "#FF4365",
       fontColor: "white",
       linkBg: "black",
       linkColor: "white",
-      img: data.ds.childImageSharp.fluid
+      img: data.wavepod.childImageSharp.fluid
     },
     {
       id: uuid(),
-      projectName: "FR Logistics",
-      projectCategory: "Business",
-      projectInfo: `FR Logistics is a logistics company that provides safe and reliable delivery and warehousing services. 
-                    The platform helps their customers book their services quickly and easily. It was created using HTML, CSS, JavaScript and Django.`,
-      projectUrl: "https://www.frlogisticsltd.com",
-      bgColor: `${ theme === "dark" ? "#404040" : "#f7f7f7"}`,
-      fontColor: `${theme === "dark" ? "#ffffff" : "#000000"}`,
-      linkBg: "black",
-      linkColor: "white",
-      img: data.fr.childImageSharp.fluid
-    },
-    {
-      id: uuid(),
-      projectName: "Chop Flix",
+      projectName: "Evodia",
       projectCategory: "E-commerce",
-      projectInfo: `Chop Flix is an ecommerce platform used to sell drum packs for music producers. The site is still in
-                    development. So far the main technology that has been used is React.`,
-      projectUrl: "http://chop-flix.netlify.app/",
-      bgColor: "#F73558",
+      projectInfo: `Evodia is a perfume ecommerce web app. Evodia was built with NextJS, styled-components and redux was used for state
+                    management. Its REST API was built with MongoDB, Node and Express and tested with Jest and Supertest. Both the front and
+                    backend were hosted on vercel.`,
+      projectUrl: "https://evodia.vercel.app",
+      bgColor: "#AF3736",
       fontColor: "white",
       linkBg: "black",
       linkColor: "white",
-      img: data.chop.childImageSharp.fluid
+      img: data.evodia.childImageSharp.fluid
     },
     {
       id: uuid(),
@@ -137,7 +140,47 @@ const ProjectListContainer = ({theme}) => {
       linkBg: "black",
       linkColor: "white",
       img: data.qube.childImageSharp.fluid
-    }
+    },
+    {
+      id: uuid(),
+      projectName: "Design Studios",
+      projectCategory: "Portfolio",
+      projectInfo: `This website was developed for a design company which specializes in graphic design and
+                    animations. However they are yet to provide their works and site content and hence the use of dummy data. 
+                    It was also developed using React.`,
+      projectUrl: "https://drvmroll-design-portfolio.netlify.app/",
+      bgColor: "#F2542D",
+      fontColor: "white",
+      linkBg: "black",
+      linkColor: "white",
+      img: data.ds.childImageSharp.fluid
+    },
+    // {
+    //   id: uuid(),
+    //   projectName: "FR Logistics",
+    //   projectCategory: "Business",
+    //   projectInfo: `FR Logistics is a logistics company that provides safe and reliable delivery and warehousing services.
+    //                 The platform helps their customers book their services quickly and easily. It was created using HTML, CSS, JavaScript and Django.`,
+    //   projectUrl: "https://www.frlogisticsltd.com",
+    //   bgColor: `${ theme === "dark" ? "#404040" : "#f7f7f7"}`,
+    //   fontColor: `${theme === "dark" ? "#ffffff" : "#000000"}`,
+    //   linkBg: "black",
+    //   linkColor: "white",
+    //   img: data.fr.childImageSharp.fluid
+    // },
+    {
+      id: uuid(),
+      projectName: "Chop Flix",
+      projectCategory: "E-commerce",
+      projectInfo: `Chop Flix is an ecommerce platform used to sell drum packs for music producers. The site is still in
+                    development. So far the main technology that has been used is React.`,
+      projectUrl: "http://chop-flix.netlify.app/",
+      bgColor: "#F73558",
+      fontColor: "white",
+      linkBg: "black",
+      linkColor: "white",
+      img: data.chop.childImageSharp.fluid
+    },
   ];
 
   return (

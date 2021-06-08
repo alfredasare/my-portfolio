@@ -4,6 +4,9 @@ module.exports = {
     description: `This is the portfolio of Alfred Asare Amoah, a Frontend Web Developer`,
     author: `@alfredamoah_`,
   },
+  flags: {
+    DEV_SSR: false
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

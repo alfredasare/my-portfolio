@@ -24,8 +24,7 @@ const Footer = () => {
       duration: 1,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".footer-first-column",
-        toggleActions: "restart none restart none"
+        trigger: ".footer-first-column"
       },
       ease: Power4.easeInOut
     })
@@ -34,8 +33,7 @@ const Footer = () => {
       duration: 1.2,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".footer-second-column",
-        toggleActions: "restart none restart none"
+        trigger: ".footer-second-column"
       },
       ease: Power4.easeInOut
     })
@@ -44,8 +42,7 @@ const Footer = () => {
       duration: 1.4,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".footer-third-column",
-        toggleActions: "restart none restart none"
+        trigger: ".footer-third-column"
       },
       ease: Power4.easeInOut
     })

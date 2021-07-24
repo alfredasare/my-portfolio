@@ -33,8 +33,7 @@ const Tech = () => {
       duration: 1,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".small-tech-head",
-        toggleActions: "restart none restart none"
+        trigger: ".small-tech-head"
       },
       ease: Power4.easeInOut
     })
@@ -44,8 +43,7 @@ const Tech = () => {
       opacity: 0,
       ease: Power4.easeInOut,
       scrollTrigger: {
-        trigger: ".tech-head",
-        toggleActions: "restart none restart none"
+        trigger: ".tech-head"
       },
     })
 
@@ -54,8 +52,7 @@ const Tech = () => {
       opacity: 0,
       ease: Power4.easeInOut,
       scrollTrigger: {
-        trigger: ".tech-paragraph",
-        toggleActions: "restart none restart none"
+        trigger: ".tech-paragraph"
       }
     })
 
@@ -65,8 +62,7 @@ const Tech = () => {
       y: 40,
       ease: Power4.easeOut,
       scrollTrigger: {
-        trigger: ".tech-stack",
-        toggleActions: "restart none restart none"
+        trigger: ".tech-stack"
       }
     });
   }, [])

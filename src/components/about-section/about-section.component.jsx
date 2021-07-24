@@ -18,8 +18,7 @@ const AboutSection = () => {
     gsap.from(".about-main", {
       opacity: 0,
       scrollTrigger: {
-        trigger: ".about-main",
-        toggleActions: "restart none restart none"
+        trigger: ".about-main"
       },
       x: -30,
       ease: Power4.easeInOut,
@@ -30,8 +29,7 @@ const AboutSection = () => {
     gsap.from(".about-side", {
       opacity: 0,
       scrollTrigger: {
-        trigger: ".about-side",
-        toggleActions: "restart none restart none"
+        trigger: ".about-side"
       },
       x: 30,
       ease: Power4.easeInOut,

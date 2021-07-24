@@ -12,8 +12,7 @@ const ProjectList = ({projectData}) => {
       duration: 1,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".small-tech-head",
-        toggleActions: "restart none restart none"
+        trigger: ".small-tech-head"
       },
       ease: Power4.easeInOut
     })
@@ -23,8 +22,7 @@ const ProjectList = ({projectData}) => {
       opacity: 0,
       ease: Power4.easeInOut,
       scrollTrigger: {
-        trigger: ".project-list-head",
-        toggleActions: "restart none restart none"
+        trigger: ".project-list-head"
       },
     })
   },[]);
